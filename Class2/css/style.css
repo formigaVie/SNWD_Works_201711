@@ -1,0 +1,25 @@
+p{
+    color:red;
+}
+
+ul{
+    font-family:Arial;
+}
+
+ol{
+    font-family: Arial;
+    font-size: 16;
+    font-weight: bold;
+}
+
+.image{
+    padding: 10px;
+    border: 6px #39f5d6 solid;
+    margin: 20px;
+    opacity:0.0;
+}
+
+.image:hover {
+  border: 6px red solid;
+  opacity:1;
+}
