@@ -1,0 +1,57 @@
+.titlepic{
+    width: 200px;
+    margin: 0px auto;
+}
+
+.logo{
+    width: 200px;
+}
+
+.title{
+    position:relative;
+    top: -70px;
+    color: #919fb7;
+    margin: 0px auto;
+    text-align:center;
+}
+
+h1,h2{
+    font-weight:200;
+}
+
+.loginbox{
+    width:400px;
+    margin: 0px auto;
+    background-color:#919fb7;
+    padding:50px 20px;
+}
+
+.loginpic{
+    width:100px;
+    margin: 0px auto;
+}
+
+.login{
+    width:100px;
+}
+
+input, button{
+    display: block;
+    width:100%;
+    margin: 10px auto;
+}
+
+button{
+    border-radius:10px;
+}
+
+logininput{
+    margin: 0 auto;
+    width:80%;
+}
+
+#needhelplink{
+    display:block;
+    text-align:right;
+    margin:0 0 0 auto;
+}

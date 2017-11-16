@@ -1,0 +1,42 @@
+16.11.2017:
+
+CSS position tricks - as homework
+
+noch einmal Boogle
+Folder Class3/boogle
+Pycharm -> Window -> Editor Tab -> Split vertically
+Bonus homework 3.4: Boogle login 
+Bild von Dort
+
+Div Google
+Div Für Schrift (groß / klein)
+Div Login (alles zusammen)
+	Div Bild
+	Div input/btn/frage
+Div Create Account
+Div footer pics
+
+bei Style.css auch noch style="text/css" ergänzen für eindeutigkeit
+alle Classes/ids klein und eindeutig geschrieben
+
+Div zuerst einmal ein Element dass einen Zeilenumbruch mit sich bringt
+Wenn keine zusätzliche Angabe über Position dann ist static, dann kommt sie dort wo sie als nächstes möglich wäre
+mit position:relative dann zu der Ausgangsposition
+
+font-weight bei Schriften direkt eintragen
+
+google.at
+	hex color picker
+
+Wenn zweimal das selbe in einer class/id steht, dann zieht das letzte
+
+im css unter class/id sind properties
+im html nach tags sind attributes
+
+bei Bereich wo es verschoben wird (alles innerhalb vom Border) hat auch noch dieselbe Hintergrundfarbe
+Margin ist außerhalb vom Border, daher keine graue Schraffierung.
+
+Input = singleton
+Button 
+
+dann stunde 4 Git
