@@ -1,0 +1,35 @@
+06.11.2017 - Installation of some helpful programs and Intro (class 1)
+
+
+PyCharm (Lampe für Hilfestellung
+Github
+Slack
+Python 2.7.12 (Anaconda)
+	Abfrage am Terminal: python --version
+Git 2.7.4
+	Abfrage am Terminal: git --version
+
+Homework:
+	Add Topic: Titel von Session Homework 1.1
+			Link zu Github
+	Github Repository (falls es nicht funktioniert mit Gist)
+
+Meetup
+
+Intro:
+Ports: 	Port 80 für http
+	Port 140 für https
+
+<a> 	Anker / Anchor
+
+Browser:
+F12	Error/Warnings in Console
+
+Pycharm:
+<!--	Kommentar
+grün unterlegt	Rechtschreibung
+rot unterlegt	Falsch
+
+Die Programmierung sollte im Html und Css gut kommentiert sein
+Hochgeladen werden nur "saubere" Versionen - also minivied Versions (ohne Kommentare) - um die Ladezeiten gering zu halten.
+
