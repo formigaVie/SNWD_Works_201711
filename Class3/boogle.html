@@ -2,42 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Boogle</title>
+    <!-- add the stylesheet -->
+    <link style="text/css" rel="stylesheet" href="css/style.css">
+    <!-- add the Favicon for the Tab -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/google_app_icon.ico" />
+    <title>Boogle 2</title>
 </head>
 <body>
-    <header>
-        <div class="header">
-            <div class="hdbtn1 hdbtn2">
-                <a href="https://mail.google.com/mail/">Gmail</a>
-            </div>
-            <div class="hdbtn1 hdbtn2">
-                <a href="https://www.google.at/imghp?hl=de">Bilder</a>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div class="main">
-            <div class="box2">
-            <p>Hier ist der erste Inhalt</p>
-            <img src="https://www.google.at/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="boogle-logo">
-            </div>
-            <div class="box3">
-            <input type="text" placeholder="Search for text"/>
-            </div>
-        </div>
-
-
-    </main>
-
-<footer>
-    <div class="footer1">
-        <p>Österreich</p>
+    <div class="header">
+        <!-- header with nearly similar values like Google.at -->
+        <a href="https://mail.google.com/mail/?tab=wm" target="_blank">Gmail</a>
+        <a href="https://www.google.at/imghp?hl=de&tab=wi" target="_blank">Bilder</a>
+        <a href="https://www.google.at/intl/de/options/" target="_blank"><img class="image" src="img/google_app_icon.png" alt="google app icon"></a>
+        <a href="https://accounts.google.com/ServiceLogin?hl=de&passive=true&continue=https://www.google.at/" target="_blank"></a>
+        <button class="bt1" type="submit">Anmelden</button>
     </div>
-    <div class="footer2">
-        <p>2.Zeile</p>
+    <!-- main with logo and input and two buttons -->
+    <div class="main">
+        <div class="main-pic">
+            <img class="pic" src="img/googlelogo_color_272x92dp.png" alt="googlelogo">
+        </div>
+        <div class="insert">
+            <input type="text">
+            <button class="btn" type="submit">Google-Suche</button>
+            <button class="btn" type="submit">Auf gut Glück</button>
+        </div>
     </div>
-</footer>
+
+    <!-- additional div with data protection values -->
+    <div class="data_prot">
+        <div class="pic2">
+            <img class="image2" src="img/shield-1086703_640.png" alt="shield">
+        </div>
+        <div class="data_prot_2">
+            <h1>Hinweise zum Datenschutz bei Google</h1>
+        </div>
+        <div class="data_prot_3">
+            <button class="btn2" type="submit">SPÄTER ERINNERN</button>
+            <button class="btn2" type="submit">JETZT ANSEHEN</button>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <!-- Footer with first line -->
+        <div class="fline">
+            <p>Österreich</p>
+        </div>
+        <!-- Footer with second line left -->
+        <div class="sline_left">
+            <a href="https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwie5_C1ncXXAhXQ56QKHU2eCBMQkdQCCBU&url=https%3A%2F%2Fwww.google.at%2Fintl%2Fde_at%2Fads%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&usg=AOvVaw0wOuxLvYn-JMSfsiktDzJV" target="_blank">Werbeprogramme</a>
+            <a href="https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwie5_C1ncXXAhXQ56QKHU2eCBMQktQCCBY&url=https%3A%2F%2Fwww.google.at%2Fservices%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&usg=AOvVaw1-OhaZRnbJ0Iuqtc_ChvdT" target="_blank">Unternehmen</a>
+            <a href="https://www.google.at/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwie5_C1ncXXAhXQ56QKHU2eCBMQkNQCCBc&url=https%3A%2F%2Fwww.google.at%2Fintl%2Fde_at%2Fabout%2F%3Futm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dhp-footer%26fg%3D1&usg=AOvVaw14OD1-i1SGPbO-kQTv2Aih" target="_blank">Über Google</a>
+        </div>
+        <!-- Footer with second line right -->
+        <div class="sline_right">
+            <a href="https://www.google.at/intl/de_at/policies/privacy/?fg=1" target="_blank">Datenschutzerklärung</a>
+            <a href="https://www.google.at/intl/de_at/policies/terms/?fg=1" target="_blank">Nutzungsbedingungen</a>
+            <a href="https://www.google.at/preferences?hl=de" target="_blank">Einstellungen</a>
+        </div>
+    </div>
 
 </body>
 </html>
