@@ -52,6 +52,11 @@ a{
 input{
     width:100%;
     display:block;
+    font-size:18px;
+}
+
+input:hover{
+    background-color:yellow;
 }
 
 .btn{

@@ -37,6 +37,54 @@ bei Bereich wo es verschoben wird (alles innerhalb vom Border) hat auch noch die
 Margin ist außerhalb vom Border, daher keine graue Schraffierung.
 
 Input = singleton
-Button 
+Button (mit abschließendem tag)
 
 dann stunde 4 Git
+
+git diff zeigt die Änderungen der nicht gestaged files
+
+git diff --staged zeigt nur die "gestageden Dateien
+
+git add .(oder Filename)
+git add -p (nur die Einzeländerung wird gefragt und korrigiert)
+git commit -m "commit message"
+git log 
+git push
+
+im Ordner: /home/mani/PycharmProjects/SNWD-patrick/SNWD_201711/SNWD_201711
+git status
+	wenn branch Master
+wenn Mergeconflict dann:
+git checkout -- .
+git pull (für aktuellen Stand vom Server)
+	Zahl -> Zeilen der Änderung zu lokaler Version (+ dazugekommen / - weggekommen)
+
+
+Excercise 2.1
+statt einer Boogle Page ist auch eine andere Seite die wir brauchen werden möglich
+
+Homework 4.3 done:
+https://try.github.io/wrap_up
+
+Bonus Homework (GIT)
+
+Bootstrap:
+Class5/bootstrap_example
+
+Einbinden von Bootstrap und javascript
+
+Wenn spezielles CSS dann als unterstes in den Header
+
+Refernzieren auf einem lokalen Ordner 
+CDN = Content Delivery Network
+
+Link:
+http://getbootstrap.com/
+Bootstrap 3.3.7
+
+CSS Styles / Grids und coloumns
+Components NAVBAR
+
+Bootstrap : Karusell (Slider)
+	Akkordeon
+	
