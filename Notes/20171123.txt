@@ -1,0 +1,46 @@
+23.11.2017:
+
+Lesson 5 im Anschluß Lesson 6
+
+Bootstrap wiederholung
+
+Friseursalon weitermachen
+
+Lesson 6
+
+Lesson 7
+Phyton vorbereitung
+
+class7 example_1_strings.py
+
+print für die Konsole
+"" Strings
+# kommentare
+
+Rechte Maustaste im Pycharm auf das File
+
+Run "<Filename>" Strg+Umschalt+F10
+
+Terminal geht auf - mit Interpreter
+
+Kompilierte Programmiersprachen z.b.: C++
+
+Python hat einen Interpreter -> kompiliert ihn nicht
+
+im Idealfall sollte "Process finished with exit code 0"
+
+Debug wäre auch möglich
+
+<Filename>
+Python Version und Pfad zur Datei
+
+Ausgabe aus Python programm
+
+Exit code 0 -> alles in Ordnung
+
+print "Hello, World!"   #Strings
+print 3                 #Integer
+print 4.23              #float
+print True              #bool
+print 3+4               #7
+print True and False    #False
