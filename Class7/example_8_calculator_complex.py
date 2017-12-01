@@ -1,49 +1,59 @@
-# print welcome to user
+#!/usr/bin/env python
+# -*- coding: UTF-8 -*-
+
+# define variable name
 name = "FormigaVIE"
+
+# print welcome to user
+print "=" *40
 print "Welcome to {} calculator" .format(name)
 print "=" *40
 
 while True:
-
-    # read user input for operation
-    # mit CTRL + P zwischen eckiger Klammer zeigt an was dort hineinkommt - Funktion raw input
-    operation_symbol = raw_input("Please enter an operation (+,-,*,/): ")
-    print "You entered " + operation_symbol
-    if operation_symbol in ["+", "-", "/", "*"]:
-        break
-    else:
-        print "Please enter a valid operation, you entered: "+ operation_symbol
-
-while True:
-        try:
-            x = float(raw_input("Please enter your first number: "))
-            print "you entered " + str(x)
+    while True:
+        # read user input for operation
+        # mit CTRL + P zwischen eckiger Klammer zeigt an was dort hineinkommt - Funktion raw input
+        operation_symbol = raw_input("Please enter an operation (+,-,*,/): ")
+        print "You entered " + operation_symbol
+        if operation_symbol in ["+", "-", "/", "*"]:
             break
-        except ValueError:
-            print "Please enter a valid operation, you entered: " + str(x)
-# calculate
-if operation_symbol == "+" or operation_symbol == "-" or operation_symbol == "*" or operation_symbol == "/":
-    # read user input for first value
-    # string in einen Integer fuer die Berechnung durchfuehren
-    x = float(raw_input("Please enter your first value: "))
-    print "You entered " + str(x)
-    # read user input for second value
-    y = float(raw_input("Please enter your second value: "))
-    # print "You entered ", y andere Schreibweise
-    print "You entered " + str(y)
+        else:
+            print "Please enter a valid operation, you entered: "+ operation_symbol
+
+    while True:
+        # read first number
+            try:
+                x = float(raw_input("Please enter your first number: "))
+                print "you entered " + str(x)
+                break
+            except ValueError:
+                print "Please enter a valid operation, you entered: " + str(x)
+
+    while True:
+        # read second number
+            try:
+                y = float(raw_input("Please enter your second number: "))
+                print "you entered " + str(y)
+                break
+            except ValueError:
+                print "Please enter a valid operation, you entered: " + str(y)
+    # calculate and print result
     if operation_symbol == "+":
         print x + y
     elif operation_symbol == "-":
         print x - y
     elif operation_symbol == "/":
         if y == 0:
+            # additional entry if divisor is 0
             print "Division by Zero"
-        elif:
-            print x / y
         else:
-            break
+            print x / y
     elif operation_symbol == "*":
         print x * y
-else:
-    print "Invalid input, try again"
-# print result
+    else:
+        #print error if entry doesn't consists the
+        print "Invalid input, try again"
+
+    again=raw_input("Do you like to calculate one more time (n for exit): ")
+    if again.lower()=="n":
+        break
