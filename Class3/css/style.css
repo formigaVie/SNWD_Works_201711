@@ -75,30 +75,25 @@ input:hover{
     margin:0px 20px;
     padding:20px 20px;
     border: 1px solid #d6d8db;
-    display:inline;
+    display:grid;
     font-family: Arial;
     position:fixed;
     left:0px;
     bottom:100px;
+    grid-template-columns: 10% 60% 30%;
 }
 
 .data_prot_2{
     height:50px;
-    display:inline;
-    position:relative;
     top:-35px;
-    padding-left:50px;
 }
 
 .data_prot_3{
     height:50px;
-    position: relative;
     top:-30px;
     right:5px;
-    display:inline;
     font-family: Arial;
     margin: 0 auto;
-    padding-left:300px;
 }
 
 .bt1, .btn2{
@@ -110,7 +105,6 @@ input:hover{
 }
 
 .btn2{
-    position:relative;
     top:-10px;
 }
 

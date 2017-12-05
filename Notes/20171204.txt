@@ -1,0 +1,42 @@
+04.12.2017:
+
+example_1_guess_secret.py:
+
+# From Tutorial Class 8
+# Run with debugger
+# Go to break point / go to next line
+# Console work with the code (Show python prompt)
+
+Lists:
+[  ] .. Leere Liste
+[1,3,"3",1.1] .. Liste mit unterschiedlichen Typen, "mutable" = Elemente sind änderbar
+(  ) .. Tuple
+(1,3,"3",1.1) .. nicht änderbar, "immutable" = Elemente sind fix / unveränderbar
+{  } .. Dictionary
+{"name":Pho, "age":12, "contacts":{"name":...}} .. "Key": Value pairs
+
+
+List & tuple indixes immer der reihe nach
+Dictionary indixes - keine fixe reihenfolge
+Update bei dictionaries entspricht dem extend bei listen
+
+a_list = []
+# referenzieren
+print a_list[0]
+
+    print a_list[0]
+IndexError: list index out of range
+
+bei Tuples = IndexError
+bei Dict = KeyError
+
+Strings = Anhäufung von Elementen und ist immutable
+
+Dictionary:
+items verwandelt eine Dictionary in ein tuple (key und value)
+[(x,y), (e,f)]
+
+a,b = (5,10) --> a = 5, b = 10
+
+growth
+

@@ -1,0 +1,87 @@
+Fragen:
+
+-) wie kann ich den eigenen Filenamen auslesen?
+
+
+len()
+.upper()
+.lower()
+
+%s" %(xx,)
+
+current date and Time
+from datetime import datetime
+
+now = datetime.now()
+print now
+
+print now.year
+print now.month
+print now.day
+
+print '%s/%s/%s' % (now.month, now.day, now.year)
+print '%s:%s:%s' % (now.hour, now.minute, now.second)
+
+print '%s/%s/%s %s:%s:%s' % (now.month, now.day, now.year,now.hour, now.minute, now.second)
+
+Conditionals and Control Flow
+
+Equal to (==)
+Not equal to (!=)
+Less than (<)
+Less than or equal to (<=)
+Greater than (>)
+Greater than or equal to (>=)
+Quadrat (power of) (**)
+
+Boolean Operators:
+True and True is True
+True and False is False
+False and True is False
+False and False is False
+
+True or True is True
+True or False is True
+False or True is True
+False or False is False
+
+Not True is False
+Not False is True
+
+Funktion:
+def using_control_once():
+    if True:
+        return "Success #1"
+
+def using_control_again():
+    if True:
+        return "Success #2"
+
+print using_control_once()
+print using_control_again()
+
+answer = "'Tis but a scratch!"
+
+def black_knight():
+    if answer == "'Tis but a scratch!":
+        return True
+    else:             
+        return False       # Make sure this returns False
+
+def french_soldier():
+    if answer == "Go away, or I shall taunt you a second time!":
+        return True
+    else:             
+        return False       # Make sure this returns False
+
+def greater_less_equal_5(answer):
+    if answer >5:
+        return 1
+    elif answer < 5:          
+        return -1
+    else:
+        return 0
+        
+print greater_less_equal_5(4)
+print greater_less_equal_5(5)
+print greater_less_equal_5(6)
