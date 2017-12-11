@@ -1,0 +1,30 @@
+11.12.2017:
+
+Plan Class 10 und Class 11
+
+Class 9 im Repo von der Stunde 07.12.2017
+
+json - Ähnlich wie dictionaries
+
+json 		langer string (keine hierarchie), verschicken
+		Textdateien einlesen und speichern -> auch sublisten möglich
+dictionaries	hierarchie (subdictionaries)
+
+z.b.: {"city":{"pp":10, 
+		"area":5}
+	"country":}
+
+Hierarchie wie ein Baum
+
+File im Ordner wo Git bereits vorhanden ist SNWD_201711 erstellen
+.gitignore
+
+.idea/
+
+Class 10
+
+assert nimmt alles was danach kommt als wahr an, falls nicht dann false
+Assertion Error
+auch für Checks z.b.: Division by Zero
+
+Test Driven Development (=TDD)

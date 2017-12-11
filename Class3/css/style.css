@@ -119,25 +119,31 @@ h1{
     background-color:#d6d8db;
     width:100%;
     font-family: Arial;
-    font-size:18px;
 }
 
 .fline{
     border-bottom:1px solid white;
     margin: 0px auto;
     padding-left:20px;
+    font-size:18px;
 }
 
+.sline{
+    font-size: 6px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
 .sline_left{
-    margin: 5px auto;
-    display:inline;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: 5px 0px;
     padding-left: 20px;
 }
 
 .sline_right{
-    position:fixed;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
     right:5px;
-    display:inline;
-    margin:0px auto;
+    margin:5px 0px;
     padding-right: 20px;
 }

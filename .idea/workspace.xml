@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="75a56cb1-c793-4f35-926d-b476d61ab615" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Class9/homework-9_2.py" afterPath="$PROJECT_DIR$/Class9/homework-9_2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Class3/boogle.html" afterPath="$PROJECT_DIR$/Class3/boogle.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Class3/css/style.css" afterPath="$PROJECT_DIR$/Class3/css/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +17,88 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="example_1_functions.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Class10/example_1_functions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="example_2_addition_func.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Class10/example_2_addition_func.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="example_3_test_calc_funcs.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Class10/example_3_test_calc_funcs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="6" lean-forward="true" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="example_4_tests.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Class10/example_4_tests.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="example_5_tdd.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Class10/example_5_tdd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="example_6_tdd_sqroot.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Class10/example_6_tdd_sqroot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="example_6_tdd_cube.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Class10/example_6_tdd_cube.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,7 +122,6 @@
         <option value="$PROJECT_DIR$/exercise_21/css/style.css" />
         <option value="$PROJECT_DIR$/Class3/boogle/booglesnwd.html" />
         <option value="$PROJECT_DIR$/Class3/boogle/css/style.css" />
-        <option value="$PROJECT_DIR$/Class3/boogle.html" />
         <option value="$PROJECT_DIR$/exercise_21/mysite.html" />
         <option value="$PROJECT_DIR$/Class5/bootstrap_example/bootstrap_example.html" />
         <option value="$PROJECT_DIR$/Class5/bootstrap_example/css/style.css" />
@@ -62,7 +144,6 @@
         <option value="$PROJECT_DIR$/Class8/example_guess-secret_2.py" />
         <option value="$PROJECT_DIR$/Class8/example_guess-secret.py" />
         <option value="$PROJECT_DIR$/Class8/exercise_8-1.py" />
-        <option value="$PROJECT_DIR$/Class3/css/style.css" />
         <option value="$PROJECT_DIR$/Class8/example.py" />
         <option value="$PROJECT_DIR$/Class8/example_1_guess_secret.py" />
         <option value="$PROJECT_DIR$/Class8/example_2_lists.py" />
@@ -74,6 +155,16 @@
         <option value="$PROJECT_DIR$/Class9/example_7_capitals_game.py" />
         <option value="$PROJECT_DIR$/Class9/menu.txt" />
         <option value="$PROJECT_DIR$/Class9/homework-9_2.py" />
+        <option value="$PROJECT_DIR$/Class3/css/style.css" />
+        <option value="$PROJECT_DIR$/Class3/boogle.html" />
+        <option value="$PROJECT_DIR$/Class10/example_1_functions.py" />
+        <option value="$PROJECT_DIR$/Class10/example_3_test_calc_funcs.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Class10/example_2_addition_func.py" />
+        <option value="$PROJECT_DIR$/Class10/example_4_tests.py" />
+        <option value="$PROJECT_DIR$/Class10/example_5_tdd.py" />
+        <option value="$PROJECT_DIR$/Class10/example_6_tdd_cube.py" />
+        <option value="$PROJECT_DIR$/Class10/example_6_tdd_sqroot.py" />
       </list>
     </option>
   </component>
@@ -101,7 +192,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,6 +239,11 @@
             <path>
               <item name="SNWD_201711" type="b2602c69:ProjectViewProjectNode" />
               <item name="SNWD_201711" type="462c0819:PsiDirectoryNode" />
+              <item name="Class10" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SNWD_201711" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SNWD_201711" type="462c0819:PsiDirectoryNode" />
               <item name="exercise_21" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -159,6 +254,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -168,16 +264,16 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../SNWD-patrick/SNWD_201711/SNWD_201711/Class1/mysite.html" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/Class2/css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Class8" />
       <recent name="$PROJECT_DIR$/Class7" />
       <recent name="$PROJECT_DIR$/Class5/bootstrap_example/css" />
       <recent name="$PROJECT_DIR$/Class5/bootstrap_example/js" />
       <recent name="$PROJECT_DIR$/Class3/css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Class2/css" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -192,106 +288,106 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.homework-9_2">
-    <configuration name="example_4_forloops" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.example_6_tdd_sqroot">
+    <configuration name="example_2_addition_func" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Class8" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Class10" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SNWD_201711" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Class8/example_4_forloops.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Class10/example_2_addition_func.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="example_5_dictionairies" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="example_4_tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Class9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Class10" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SNWD_201711" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Class9/example_5_dictionairies.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Class10/example_4_tests.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="example_6_dictionaries_higher" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="example_5_tdd" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Class9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Class10" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SNWD_201711" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Class9/example_6_dictionaries_higher.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Class10/example_5_tdd.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="example_7_capitals_game" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="example_6_tdd_cube" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Class9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Class10" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SNWD_201711" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Class9/example_7_capitals_game.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Class10/example_6_tdd_cube.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="homework-9_2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="example_6_tdd_sqroot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Class9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Class10" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="SNWD_201711" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Class9/homework-9_2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Class10/example_6_tdd_sqroot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.example_4_forloops" />
-      <item index="1" class="java.lang.String" itemvalue="Python.example_5_dictionairies" />
-      <item index="2" class="java.lang.String" itemvalue="Python.example_6_dictionaries_higher" />
-      <item index="3" class="java.lang.String" itemvalue="Python.example_7_capitals_game" />
-      <item index="4" class="java.lang.String" itemvalue="Python.homework-9_2" />
+      <item index="0" class="java.lang.String" itemvalue="Python.example_2_addition_func" />
+      <item index="1" class="java.lang.String" itemvalue="Python.example_4_tests" />
+      <item index="2" class="java.lang.String" itemvalue="Python.example_5_tdd" />
+      <item index="3" class="java.lang.String" itemvalue="Python.example_6_tdd_sqroot" />
+      <item index="4" class="java.lang.String" itemvalue="Python.example_6_tdd_cube" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.homework-9_2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.example_7_capitals_game" />
-        <item index="2" class="java.lang.String" itemvalue="Python.example_6_dictionaries_higher" />
-        <item index="3" class="java.lang.String" itemvalue="Python.example_5_dictionairies" />
-        <item index="4" class="java.lang.String" itemvalue="Python.example_4_forloops" />
+        <item index="0" class="java.lang.String" itemvalue="Python.example_6_tdd_sqroot" />
+        <item index="1" class="java.lang.String" itemvalue="Python.example_6_tdd_cube" />
+        <item index="2" class="java.lang.String" itemvalue="Python.example_5_tdd" />
+        <item index="3" class="java.lang.String" itemvalue="Python.example_4_tests" />
+        <item index="4" class="java.lang.String" itemvalue="Python.example_2_addition_func" />
       </list>
     </recent_temporary>
   </component>
@@ -318,18 +414,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1442" height="876" extended-state="6" />
+    <frame x="-1" y="25" width="1442" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14705883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1492109" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988358" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32933334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998565" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -378,50 +475,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Class1/mysite.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="97" column="118" lean-forward="false" selection-start-line="97" selection-start-column="118" selection-end-line="97" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Class1/mysite.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Class1/mysite.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/Class1/mysite.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="97" column="118" lean-forward="false" selection-start-line="97" selection-start-column="118" selection-end-line="97" selection-end-column="118" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Class1/mysite.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Class1/mysite.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/Class2/fakebook_exercise.html" />
     <entry file="file://$PROJECT_DIR$/Class2/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -602,20 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class3/boogle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Class3/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="82" column="36" lean-forward="false" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Class8/example.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -648,7 +687,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-453">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -656,7 +694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="43" column="41" lean-forward="false" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -664,7 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="524">
           <caret line="45" column="13" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="45" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -672,7 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-111">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -680,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
           <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="36" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -688,15 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Class9/homework-9_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -712,6 +737,93 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-99">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class3/boogle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="65" column="29" lean-forward="false" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class9/homework-9_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class3/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="82" column="36" lean-forward="false" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class10/example_1_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="true" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class10/example_3_test_calc_funcs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class10/example_2_addition_func.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class10/example_4_tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class10/example_5_tdd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class10/example_6_tdd_cube.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class10/example_6_tdd_sqroot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
           <folding />
         </state>
       </provider>

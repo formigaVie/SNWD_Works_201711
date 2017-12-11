@@ -1,0 +1,89 @@
+
+One function call the other
+
+def one_good_turn(n):
+  return n + 1
+    
+def deserves_another(n):
+  return one_good_turn(n) + 2
+
+def cube(number):
+  return number * number * number
+
+def by_three(number):
+  if number % 3 == 0:
+    return cube(number)
+  else:
+    return False
+
+# Import *just* the sqrt function from math on line 3!
+from math import sqrt
+
+# Import *everything* from the math module on line 3!
+from math import *
+
+import math # Imports the math module
+everything = dir(math) # Sets everything to a list of things from math
+print everything # Prints 'em all!
+
+def biggest_number(*args):
+  print max(args)
+  return max(args)
+    
+def smallest_number(*args):
+  print min(args)
+  return min(args)
+
+def distance_from_zero(arg):
+  print abs(arg)
+  return abs(arg)
+
+biggest_number(-10, -5, 5, 10)
+smallest_number(-10, -5, 5, 10)
+distance_from_zero(-10)
+
+# Set maximum to the max value of any set of numbers on line 3!
+
+maximum = max(4, 8, 15)
+
+print maximum
+
+# Set minimum to the min value of any set of numbers on line 3!
+
+minimum = min(350,12,25)
+
+print minimum
+
+absolute = abs(-42)
+
+print absolute
+
+# Print out the types of an integer, a float,
+# and a string on separate lines below.
+
+print type(56)
+print type(6.5)
+print type('test')
+
+def shut_down(s):
+  if s == "yes":
+    return "Shutting down"
+  elif s == "no":
+    return "Shutdown aborted"
+  else:
+    return "Sorry"
+
+import math
+print math.sqrt(13689)
+
+First, def a function called distance_from_zero, with one argument (choose any argument name you like).
+
+If the type of the argument is either int or float, the function should return the absolute value of the function input.
+
+Otherwise, the function should return "Nope"
+
+def distance_from_zero(num):
+  if type(num) == int or type(num) == float:
+    return abs(num)
+  else:
+    return "Nope"
