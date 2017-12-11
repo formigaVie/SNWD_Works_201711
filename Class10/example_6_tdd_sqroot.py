@@ -1,13 +1,15 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 
-# """ in erster Zeile unter funktion dann kann ich google doc style erstellen
+# """ in erster Zeile unter funktion dann kann ich googlestyle docstring (Restructred text) erstellen
 # durch Type kann der Variablentype definiert werden und diese wird dann gecheckt
+# durch rtype kann auch der Rueckgabewerttyp definiert werden
 def cube_root(x):
     """
     :param x: cube root
     :type x:int or float
     :return:
+    :rtype:int or float
     """
     return x**(1/3)
 

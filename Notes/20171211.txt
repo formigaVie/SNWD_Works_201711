@@ -28,3 +28,49 @@ Assertion Error
 auch für Checks z.b.: Division by Zero
 
 Test Driven Development (=TDD)
+
+random.randint(a,b)
+
+inklusive a, b
+
+random.choice
+random.shuffle
+
+https://docs.python.org/2.7/library/random.html?highlight=random#module-random
+
+Class 10 Hausaufgaben - Lotterie mit random, etc.
+
+Class 11:
+example_1_classes
+Klassen
+Class
+Container den ich selbst definieren kann
+Funktionen in einer Klasse wird Methode genannt
+(object): bei parentclass
+
+int
+float
+str
+list
+dict
+tuple
+
+Telefonbuch String und einem Zahl (z.B.: Vorname / Nachname / Zahl / Adresse)
+
+alfred ist eine Instanz der Klasse human (alles was erstanden ist vom Blueprint der Klasse human)
+Constructor ist die init Funktion
+
+	self.age (age = attributes)
+	Variablen in einer Klasse sind attributes
+
+	def eat():
+	Funktionen in einer Klasse sind Methods
+
+Python setzt das self selbst - daher nicht explizit aufgerufen. (Python intern)
+Referenz auf sich selbst
+
+this in Java entspricht self bei Python
+
+example 3 (finalisieren)
+
++ Homework und inheritance
