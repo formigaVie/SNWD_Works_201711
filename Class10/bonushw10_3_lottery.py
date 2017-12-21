@@ -17,8 +17,8 @@ def welcome_user():
 def question():
     countg = []
     guess = int(raw_input("Please enter how many random numbers would you like to have: "))
-    for x in range(0,guess+1):
-        if x < guess:
+    for i in range(0,guess+1):
+        if i < guess:
             lotto = random.randint(0,45)
             countg.append(lotto)
         else:
