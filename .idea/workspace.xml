@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a56cb1-c793-4f35-926d-b476d61ab615" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Class11/homework_11_2.py" afterPath="$PROJECT_DIR$/Class11/homework_11_2.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,16 +14,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="example_1_classes.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Class11/example_1_classes.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="20" lean-forward="false" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="example_8_calculator_complex.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Class7/example_8_calculator_complex.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -74,16 +64,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homework-7_3.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Class7/homework-7_3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="example_guess-secret.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Class8/example_guess-secret.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -104,11 +84,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homework_11_2.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="homework_11_2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Class11/homework_11_2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="816">
               <caret line="48" column="57" lean-forward="false" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bonushw10_3_lottery.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Class10/bonushw10_3_lottery.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="169">
+              <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+              <folding>
+                <element signature="e#47#60#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Class10/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -310,7 +312,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.homework_11_2">
+  <component name="RunManager" selected="Python.bonushw10_3_lottery">
     <configuration name="bonushw10_3_lottery" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -405,11 +407,11 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.homework_11_2" />
-        <item index="1" class="java.lang.String" itemvalue="Python.example_4_inheritance" />
-        <item index="2" class="java.lang.String" itemvalue="Python.example_3_tests_classes" />
-        <item index="3" class="java.lang.String" itemvalue="Python.example_2_methods" />
-        <item index="4" class="java.lang.String" itemvalue="Python.bonushw10_3_lottery" />
+        <item index="0" class="java.lang.String" itemvalue="Python.bonushw10_3_lottery" />
+        <item index="1" class="java.lang.String" itemvalue="Python.homework_11_2" />
+        <item index="2" class="java.lang.String" itemvalue="Python.example_4_inheritance" />
+        <item index="3" class="java.lang.String" itemvalue="Python.example_3_tests_classes" />
+        <item index="4" class="java.lang.String" itemvalue="Python.example_2_methods" />
       </list>
     </recent_temporary>
   </component>
@@ -747,20 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Class10/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Class10/bonushw10_3_lottery.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" column="12" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Class11/example_2_methods.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -858,6 +846,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="48" column="57" lean-forward="false" selection-start-line="48" selection-start-column="57" selection-end-line="48" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class10/bonushw10_3_lottery.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="22" column="29" lean-forward="true" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+          <folding>
+            <element signature="e#47#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Class10/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding />
         </state>
       </provider>
