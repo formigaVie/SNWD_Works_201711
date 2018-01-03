@@ -20,10 +20,21 @@ def question():
     for i in range(0,guess+1):
         if i < guess:
             lotto = random.randint(0,45)
-            countg.append(lotto)
+            # add an additional check for existing values in the list countg
+            if lotto not in countg:
+                countg.append(lotto)
+            elif lotto in countg:
+                lotto = random.randint(0, 45)
+                if lotto not in countg:
+                    countg.append(lotto)
+                else:
+                    pass
+            else:
+                pass
         else:
             pass
-        return countg
+    # return the sorted list countg after the if loop
+    return sorted(countg)
 def christmas():
     # for a christmas greeting between first of december and sixth of january
     if str(datum) >= "2017-12-01" and str(datum) <= "2018-01-06":
