@@ -1,0 +1,52 @@
+Class 12:
+
+Repeating the basics of programming
+
+repetition lottery game
+
+randint(0,5) -> 2
+		3
+
+shuffle ([1...45]) -> (2,45,8,3,...)
+
+sample([1,...45], 6) -> 
+
+random.choice (von einer Liste zufallsfragen /-zahlen zurück)
+
+Listen sind veränderbar (mutable)
+tuples immutable
+string immutable
+
+slicen [:]
+
+if __name__ == "__main__"
+-> guard protection from being executed on import
+
+Class 13:
+
+
+BeautifulSoup ist nun eine Instanz
+
+nimmt alles was auf der Webseite ist -> Head und Head etc.
+wird soup.head
+
+soup.title
+
+mit . immer nur das erste Element in dem File
+
+sonst find all für alle Elemente dieses Typs
+
+print soup.html.head.title.string -> möglich
+wenn nur eines vorhanden dann
+print soup.title
+
+Strg Shift - verringert alle funktionen
+
+keine Datenbanken - nur im Zuge von GAE data storing
+
+Homework:
+Bonus
+13.1
+13.2
+bonus hw 13.3
+bonus

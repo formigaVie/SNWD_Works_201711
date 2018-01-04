@@ -49,9 +49,9 @@ def edit_cars(cars):
     print "Km {} updated to {}." .format(selected_cars.km,selected_cars.get_full_car())
 
     new_sd = raw_input("Please enter a new servicedate for {}: " .format(selected_cars.get_full_car()))
-    selected_cars.sd = new_sd
+    selected_cars.servicedate = new_sd
     print ""  # empty line
-    print "Servicedate {} updated to {}." .format(selected_cars.sd,selected_cars.get_full_car())
+    print "Servicedate {} updated to {}." .format(selected_cars.servicedate,selected_cars.get_full_car())
 
 def main():
     print "Welcome to the carlist"
