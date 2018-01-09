@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fakebook</title>
+</head>
+<body>
+    <!-- different header -->
+    <h1>This is my Fakebook Site</h1>
+    <div>
+        <span>On this Fakebook Site you will find <em>informations</em> about me</span>
+    </div>
+    <!-- unorderd Content list -->
+    <div id="Content">
+        <ul>
+            <li><a href="#Chapter1">Chapter1</a></li>
+            <li><a href="#Chapter2">Chapter2</a></li>
+            <li><a href="#Hobbies">Hobbies</a></li>
+            <li><a href="#Arbeitspakete">Arbeitspakete</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#impressum">Impressum</a></li>
+        </ul>
+    </div>
+    <!-- div including Links with text, Links with picture -->
+    <div id="Chapter1">
+        <h2>Chapter 1</h2>
+        <!-- hyperlink with bold and Italic text -->
+        <a href="http://www.iceagemovies.com" target="_blank"><strong><em>ICE AGE MOVIES</em></strong></a>
+        <br />
+        <a href="http://www.iceagemovies.com" target="_blank"><img src="https://tse3.mm.bing.net/th?id=OIP.PxAIRFV5c2CoU-9qGD937gEsCh&pid=Api" alt="IceAge-Mannisfamily"></a>
+    </div>
+    <!-- div including a search function and tables-->
+    <div id="Chapter2">
+        <h3>Chapter 2</h3>
+        Search:<input type="text" placeholder="Search for text"/>
+        <table>
+          <thead>
+            <tr>
+                <!-- Table header mit Table row und 3 Column -->
+                <th scope="col">column1</th>
+                <th scope="col">column2</th>
+                <th scope="col">column3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <!-- Table body mit 4 Table rows und 3 Columns (inklusive Rowspan/Colspan -->
+                <td>0</td>
+                <td>8</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td colspan="2">47</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Final</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td rowspan="2">Row</td>
+            </tr>
+          </tbody>
+                <!-- Table footer mit 3 Columns -->
+          <tfood>
+              <td>Total</td>
+              <td>Last</td>
+              <td>row</td>
+          </tfood>
+        </table>
+    </div>
+    <!-- add div-->
+    <div id="Hobbies">
+        <h2>Hobies</h2>
+        <ul> <!-- unordered list-->
+            <li>Programmieren</li> <!--list items-->
+            <li>lesen</li>
+        </ul>
+    </div>
+    <div id="Arbeitspakete">
+        <h2>Arbeitspakete</h2>
+        <ol> <!-- ordered list-->
+            <li>Programmieren</li> <!--list items-->
+            <li>lesen</li>
+            <li>e-learinng course</li>
+        </ol>
+    </div>
+    <div id="media">
+        <h2>Media</h2>
+        <!-- image einfügen und source-->
+        <img src="https://tse3.mm.bing.net/th?id=OIP.ZJwTYy5rRpGXANfK720uUAEsC2&pid=Api" alt="IceAge-Manni-Elli">
+        <!-- Blocktags (mit Zeilenumbruch) - div und Inlinetags (kein Zeilenumbrauch) -img -->
+        <br />
+        <!-- Video und controls derzeit nicht funktionsfähig da kein *.mp4 verlinkt!! -->
+        <video src="https://www.youtube.com/watch?v=hzixp8s4pyg" width="320" height="240" controls>Video not supported</video>
+    </div>
+    <!-- div with impressum -->
+    <div id="impressum">
+        <h2>Impressum</h2>
+        <!-- <br><!-- Singleton -->
+        <!-- paragraph part-->
+        <p>This is my Site:</p>
+        <!-- paragraph bold -->
+        <p><strong>formigaVIE</strong></p>
+    </div>
+</body>
+</html>

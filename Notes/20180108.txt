@@ -1,0 +1,47 @@
+install Google App Engine (hw 14.2) - done
+Class 15
+Google Cloud
+
+
+Wenn mehr als 15 Versionen upgeloaded wurden - werden diese über compute -> app engine -> versionen manuell gelöscht werden
+
+im PycharmProjects unten den kleinen Terminal Knopf betätigen
+
+Create a new configuration
+
+google cloud plattform
+Reference
+gcloud init
+gcloud app
+
+cloud.google.com
+
+*.yaml
+
+für Google App Engine
+python 2 project
+
+2 Handlers - wie wird traffic behandelt der auf die Webseite kommt
+url /assets
+-> static_dir/assets
+
+Bilder, css, javascript
+
+*. alles andere
+main.app
+
+Route
+Handler
+HTML
+
+gcloud app deploy # zum Hochladen auf die google app engine
+
+
+Nächste Stunde
+
+Homework:
+Try to make the fakebook to GAE
+
+Try to make the frisörsalon to GAE
+(change the pictures and add the css to assets, templates to css)
+Update the Homeworks according the tables
