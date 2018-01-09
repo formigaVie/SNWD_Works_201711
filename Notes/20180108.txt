@@ -34,8 +34,8 @@ Route
 Handler
 HTML
 
-gcloud app deploy # zum Hochladen auf die google app engine
-
+/bin/google-cloud-sdk/bin/gcloud app deploy # zum Hochladen auf die google app engine
+update .bashrc updaten
 
 Nächste Stunde
 

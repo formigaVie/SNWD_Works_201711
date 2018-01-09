@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- add Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo-snwd.ico" />
+    <!-- Bootstrap CSS -->
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/style2.css">
+  <!-- JavaScript files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <title>WD1-Notes</title>
+</head>
+<body>
+<!-- Header outcommented according fixed navbar -> shall be enough -->
+<!-- <div class="page-header">
+  <h1>Web Development 1 <small> NOTES</small></h1>
+</div> -->
+
+    <!-- add container for every section, slider add jumbotron, andere sectionen add row, abschluß add footer -->
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="#">Web Development 1 - Notes</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+            <!-- Modal -->
+        <div id="mySNWD" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Smart Ninja - Web Development 1</h4>
+              </div>
+              <div class="modal-body">
+                <p>These page was dedicated for using as a summary of notes and links for my Smartninja - Web Development course 1.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+          <!-- Trigger the modal with a button -->
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#mySNWD">About WD1</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- Slider -->
+<div class="container-fluid slidertop">
+  <div class="jumbotron">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+  </ol>
+  <!-- Höhe an die Slider anpassen -->
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <div class="img-center">
+        <img src="../assets/img/logo-snwd2.png" alt="SNWD" width="100%" class="img-responsive">
+      </div>
+      <!-- <div class="carousel-caption"></div> -->
+    </div>
+    <div class="item">
+      <div class="img-center">
+        <img src="../assets/img/python-logo.jpeg" alt="python" width="100%" class="img-responsive">
+      </div>
+      <!-- <div class="carousel-caption"></div> -->
+    </div>
+    <div class="item">
+      <div class="img-center">
+        <img src="../assets/img/pycharm-logo.jpeg" alt="pycharm" width="100%" class="img-responsive">
+      </div>
+      <!-- <div class="carousel-caption"></div> -->
+    </div>
+    <div class="item">
+      <div class="img-center">
+        <img src="../assets/img/github-logo.jpeg" alt="pycharm" width="100%" class="img-responsive">
+      </div>
+      <!-- <div class="carousel-caption"></div> -->
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="..." alt="">
+          <div class="caption">
+            <h3>06.11.2017</h3>
+            <p>Class</p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="..." alt="">
+          <div class="caption">
+            <h3>09.11.2017</h3>
+            <p>Class</p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="..." alt="">
+          <div class="caption">
+            <h3>13.11.2017</h3>
+            <p>Class</p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+    </div>
+     <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="..." alt="">
+          <div class="caption">
+            <h3>16.11.2017</h3>
+            <p>Class 4</p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <h1>Useful links</h1>
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          HTML & CSS
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-3 col-border">
+        <ul>
+        <li><a href="https://www.w3schools.com/html/default.asp">W3SCHOOLS-HTML</a></li>
+        <li>leer</li>
+        </ul>
+          </div>
+      <div class="col-sm-3 col-border">
+        <ul>
+        <li>leer</li>
+        <li><a href="https://www.w3schools.com/css/default.asp">W3SCHOOLS-CSS</a></li>
+        </ul>
+      </div>
+       <div class="col-sm-3 col-border">
+        <ul>
+        <li>leer</li>
+        <li><a href="https://www.w3schools.com/css/default.asp">W3SCHOOLS-CSS</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <ul>
+        <li>leer</li>
+        <li><a href="https://www.w3schools.com/css/default.asp">W3SCHOOLS-CSS</a></li>
+        </ul>
+      </div>
+
+       </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="container-fluid formbody">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email address</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+  <div class="form-group">
+      <div class="form-group">
+      <label for="exampleFormControlInput2">Last Name</label>
+      <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Mustermann">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-group">
+    <label for="exampleFormControlInput3">First Name</label>
+    <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Max">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Message</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" Placeholder="Please provide me your message here" rows="3"></textarea>
+  </div>
+   <button type="button" class="btn btn-primary pull-right">Send</button>
+  <button type="button" class="btn btn-default pull-right">Delete</button>
+  </div>
+
+
+</body>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+<div class="container-fluid">
+    <footer>
+          <div class="navbar-text">Impressum</div>
+          <div class="navbar-text">Contact</div>
+          <div class="navbar-text">Facebook</div>
+          <div class="navbar-text">Twitter</div>
+    </footer>
+</div>
+</nav>
+</html>
