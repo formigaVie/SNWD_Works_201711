@@ -30,13 +30,11 @@ class MainHandler(BaseHandler):
     def get(self):
         return self.render_template("hello.html")
 
-
-
 class BlogHandler(BaseHandler):
     def get(self):
-        current_datetime = datetime.datetime.now()
-        my_number = random.randint(0,9)
-        readable_date2 = current_datetime.isoformat()
+        my_number = random.randint(0, 9)
+        current_datetime2 = datetime.datetime.now()
+        readable_date2 = current_datetime2.isoformat()
         return self.render_template("blog.html",params={"site_mynumber": my_number,
                                                         "site_date2": readable_date2})
 

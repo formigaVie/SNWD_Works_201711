@@ -2,6 +2,8 @@
 import os
 import jinja2
 import webapp2
+import random
+import datetime
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
@@ -26,8 +28,44 @@ class BaseHandler(webapp2.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        return self.render_template("hello.html")
+        return self.render_template("index.html")
+
+class BlogHandler(BaseHandler):
+    def get(self):
+        current_datetime2 = datetime.datetime.now()
+        readable_date2 = current_datetime2.strftime("%Y-%m-%d %H:%M")
+        return self.render_template("blog.html", params={"site_date2": readable_date2})
+
+class MyProjectHandler(BaseHandler):
+    def get(self):
+        current_datetime3 = datetime.datetime.now()
+        readable_date3 = current_datetime3.strftime("%Y-%m-%d %H:%M")
+        return self.render_template("myprojects.html",params={"site_date3": readable_date3})
+
+class ContactHandler(BaseHandler):
+    def get(self):
+        current_datetime4 = datetime.datetime.now()
+        readable_date4 = current_datetime4.strftime("%Y-%m-%d %H:%M")
+        return self.render_template("contact.html",params={"site_date4": readable_date4})
+
+MY_HISTORY=[]
+
+class LottoHandler(BaseHandler):
+    def get(self):
+        global MY_HISTORY
+        current_datetime = datetime.datetime.now()
+        readable_date = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+        my_lotto = random.sample(range(0,45),6)
+        # append date and my_lotto to MY_HISTORY
+        MY_HISTORY.append( (readable_date,my_lotto) )
+        return self.render_template("lotto.html", params={"mylotto": my_lotto,
+                                                          "site_date": readable_date,
+                                                          "site_history": MY_HISTORY})
 
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
+    webapp2.Route('/myprojects', MyProjectHandler),
+    webapp2.Route('/blog', BlogHandler),
+    webapp2.Route('/contact', ContactHandler),
+    webapp2.Route('/lotto', LottoHandler),
 ], debug=True)
