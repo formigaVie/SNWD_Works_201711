@@ -1,0 +1,71 @@
+class 15 + class 16
+
+Notwendig:
+route
+handler
+html
+
+runtime: mit welcher Sprache
+
+url: /assets
+wo kann ich statisch files ablegen
+static heißt es verhält sich so wie ein Ordner auf Windows
+
+url: .*
+script: main.app -> Leitet die Anfrage an main.py weiter
+
+libraries
+Google bekommt die Infos welche libraries zu installieren sind
+
+Readme.md (in Markup language verfasst
+Dort steht # für H1
+
+main.py
+
+class MainHandler
+	get Methode für eine Anfrage
+
+	post Methode für ein Hochladen von Daten
+
+MainHandler ist ein Basehandler bekommt vererbte Methoden vom Basehandler
+
+render_template MEthode vom Basehandler
+
+kwargs..keyword arguments: e.g.params=None: -> sind optional
+args....arguments -> sind Pflicht
+
+template_dir os..operation system
+gehe auf Höhe des templates
+
+jinja_env ruft template directory
+
+escape geht um \ funktionalität
+
+\\ hebt die Funktion eines \ auf und stellt diesen nur mehr da
+
+Unter settings -> Auswahl des Projekts -> können zusätzliche packages installiert werden
+jinja2
+webapp2
+
+homeworks von appspot.com in slack / generals posten
+
+Google cloud plattform:
+App Engine -> Dashboard .. rechts oben ist die Seite zu finden
+
+
+params muss immer ein dictionary sein { }
+["key": "value"}
+
+jinja soll das befüllen:
+key -> ein Platzhalter
+value -> Wert
+
+im HTML ist es dann wegen Jinja erforderlich einen den Rückgabewerte einzutragen
+{{  }} -> Wert wird ausgewertet von Jinja, e.g. Person.age
+{%  %} -> Ausdruck 
+
+immer eine Route definieren
+
+global .. wenn get auf MyHistory zugreift verwende die Global definierte liste MY_HISTORY 
+
+Class 16

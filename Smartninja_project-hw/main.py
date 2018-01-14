@@ -28,16 +28,6 @@ class MainHandler(BaseHandler):
     def get(self):
         return self.render_template("hello.html")
 
-class SecondHandler(BaseHandler):
-    def get(self):
-        return self.render_template("mysite.html")
-
-class ThirdHandler(BaseHandler):
-    def get(self):
-        return self.render_template("WD1-notes.html")
-
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
-    webapp2.Route('/2', SecondHandler),
-    webapp2.Route('/3', ThirdHandler),
 ], debug=True)
