@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secret Number Game</title>
+</head>
+<body>
+    <h1>Welcome to the Secret Number Game</h1>
+
+    <!-- wegen <h3> {{ answers }} </h3> -->
+    {% if is_guessed %}
+    <h3>Congratulations! You Won</h3>
+    {% else %}
+        {% if has_guessed %}
+            <h3>Sorry, please try again</h3>
+        {% endif %}
+        <h2>Guess the secret number between 0 and 5: </h2>
+        <form method="post">
+            <input placeholer="Guess the number" type="number" name="guess">
+            <button type="submit">Submit</button>
+        </form>
+    {% endif %}
+
+    <form method="post">
+        <button type="submit" value="A" name="answer"> A </button>
+    </form>
+    <form method="post">
+        <button type="submit" value="B" name="answer"> B </button>
+    </form>
+    <form method="post">
+        <button type="submit" value="C" name="answer"> C </button>
+    </form>
+    <form method="post">
+        <button type="submit" value="D" name="answer"> D </button>
+    </form>
+
+    <h5>You pressed {{ answer }}</h5>
+</body>
+</html>

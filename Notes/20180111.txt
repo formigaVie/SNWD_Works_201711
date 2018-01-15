@@ -62,7 +62,7 @@ value -> Wert
 
 im HTML ist es dann wegen Jinja erforderlich einen den Rückgabewerte einzutragen
 {{  }} -> Wert wird ausgewertet von Jinja, e.g. Person.age
-{%  %} -> Ausdruck 
+{%  %} -> Ausdruck for / if
 
 immer eine Route definieren
 

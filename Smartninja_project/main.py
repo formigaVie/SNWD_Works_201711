@@ -30,6 +30,7 @@ class MainHandler(BaseHandler):
     def get(self):
         return self.render_template("hello.html")
 
+MY_BLOG=[]
 class BlogHandler(BaseHandler):
     def get(self):
         my_number = random.randint(0, 9)
@@ -37,6 +38,13 @@ class BlogHandler(BaseHandler):
         readable_date2 = current_datetime2.isoformat()
         return self.render_template("blog.html",params={"site_mynumber": my_number,
                                                         "site_date2": readable_date2})
+    def post(self):
+        message = self.request.get("message")
+        global MY_BLOG
+        current_datetime = datetime.datetime.now()
+        readable_date3 = current_datetime.strftime("%Y-%m-%d %H:%M")
+        MY_BLOG.append( (readable_date3, message) )
+        return self.render_template("blog.html", params={"page_history": MY_BLOG})
 
 MY_HISTORY=[]
 
@@ -53,9 +61,40 @@ class LottoHandler(BaseHandler):
                                                           "site_date": readable_date,
                                                           "site_history": MY_HISTORY})
 
+class SNGHandler(BaseHandler):
+    def get(self):
+        return self.render_template("sng.html")
+
+    def post(self):
+        has_guessed = True
+        guess = self.request.get("guess")
+        # secretnumber = random.sample((0,5),1)
+        secretnumber = 4
+        number=int(guess)
+        is_guessed = secretnumber == number
+        #is_guessed wird ein Bool
+        #check auf Html oder im Backend moeglich
+        #if secretnumber == guess:
+        #    answer="Congratulations you have found the secret number {}" .format(secretnumber)
+        #else:
+        #    answer="sorry please try again"
+        #return self.render_template("sng.html", params={"answers": answer})
+
+        return self.request("answer")
+
+        return self.render_template("sng.html", params={"is_guessed": is_guessed,
+                                                        "has_guessed": has_guessed})
 
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
     webapp2.Route('/blog', BlogHandler),
     webapp2.Route('/lotto', LottoHandler),
+    webapp2.Route('/sng', SNGHandler),
 ], debug=True)
+
+def main():
+    from paste import httpserver
+    httpserver.serve(app, host='0.0.0.0', port='8080')
+
+if __name__ == '__main__':
+    main()
