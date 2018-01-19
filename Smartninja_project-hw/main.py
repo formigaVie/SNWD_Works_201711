@@ -59,8 +59,17 @@ class LottoHandler(BaseHandler):
         # append date and my_lotto to MY_HISTORY
         MY_HISTORY.append( (readable_date,my_lotto) )
         return self.render_template("lotto.html", params={"mylotto": my_lotto,
-                                                          "site_date": readable_date,
                                                           "site_history": MY_HISTORY})
+
+class CGHandler(BaseHandler):
+    def get(self):
+            return self.render_template("capitalsgame.html")
+
+    def post(self):
+            has_guessed = True
+            guess = self.request.get("guess")
+            # secretnumber = random.sample((0,5),1)
+            #  "site_date": readable_date,
 
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
@@ -68,4 +77,12 @@ app = webapp2.WSGIApplication([
     webapp2.Route('/blog', BlogHandler),
     webapp2.Route('/contact', ContactHandler),
     webapp2.Route('/lotto', LottoHandler),
+    webapp2.Route('/capital', CGHandler),
 ], debug=True)
+
+def main():
+    from paste import httpserver
+    httpserver.serve(app, host='0.0.0.0', port='8090')
+
+if __name__ == '__main__':
+    main()

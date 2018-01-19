@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Secret Number Game</title>
-</head>
-<body>
+{% extends "frame.html" %}
+
+{% block title %} Secret Number Game {% endblock title %}
+{% block page_content %}
     <h1>Welcome to the Secret Number Game</h1>
 
     <!-- wegen <h3> {{ answers }} </h3> -->
@@ -35,5 +32,4 @@
     </form>
 
     <h5>You pressed {{ answer }}</h5>
-</body>
-</html>
+{% endblock page_content %}

@@ -4,6 +4,7 @@ import jinja2
 import webapp2
 import random
 import datetime
+import model
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
@@ -70,7 +71,8 @@ class SNGHandler(BaseHandler):
         guess = self.request.get("guess")
         # secretnumber = random.sample((0,5),1)
         secretnumber = 4
-        number=int(guess)
+        number=int(guess or 0)
+        # wenn guess keinen Wert hat oder leer ist
         is_guessed = secretnumber == number
         #is_guessed wird ein Bool
         #check auf Html oder im Backend moeglich
@@ -80,16 +82,39 @@ class SNGHandler(BaseHandler):
         #    answer="sorry please try again"
         #return self.render_template("sng.html", params={"answers": answer})
 
-        return self.request("answer")
+        #return self.request("answer")
 
         return self.render_template("sng.html", params={"is_guessed": is_guessed,
                                                         "has_guessed": has_guessed})
+
+class SLHandler(BaseHandler):
+    def get(self):
+        return self.render_template("shoppinglist.html")
+
+class CGHandler(BaseHandler):
+    def get(self):
+        return self.render_template("capitalsgame.html")
+
+class RBlHandler(BaseHandler):
+    def get(self):
+        messages = model.Message.query().fetch()
+        return self.render_template("realblog.html", params={"messages": messages})
+    def post(self):
+        uname = self.request.get("username")
+        message_t = self.request.get("message_text")
+        message = model.Message(message_text=message_t, name=uname)
+        message.put()
+        return self.redirect_to("realblog")
 
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
     webapp2.Route('/blog', BlogHandler),
     webapp2.Route('/lotto', LottoHandler),
     webapp2.Route('/sng', SNGHandler),
+    webapp2.Route('/shoppinglist', SLHandler),
+    webapp2.Route('/capitals',CGHandler),
+    webapp2.Route('/realblog',RBlHandler, name="realblog"),
+
 ], debug=True)
 
 def main():
