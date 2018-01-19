@@ -87,11 +87,40 @@ class RBlHandler(BaseHandler):
         return self.render_template("realblog.html", params={"messages": messages})
     def post(self):
         uname = self.request.get("username")
+        uname = str(uname or "Anonymous")
         message_t = self.request.get("message_text")
         message = model.Message(message_text=message_t, name=uname)
         message.put()
         return self.redirect_to("realblog")
 
+class CalcHandler(BaseHandler):
+    def get(self):
+        return self.render_template("calculator.html")
+
+    def post(self):
+        has_guessed = True
+        x = self.request.get("x")
+        ops = self.request.get("operation_symbol")
+        y = self.request.get("y")
+
+        a = float(x or 0)
+        b = float(y or 0)
+
+        if ops == "+" or ops == "-" or ops == "*" or ops == "/":
+            is_ok = True
+            if ops == "+":
+                solution = a + b
+            elif ops == "-":
+                solution = a - b
+            elif ops == "/":
+                solution = a / b
+            elif ops == "*":
+                solution = a * b
+        else:
+            is_ok = False
+
+        return self.render_template("calculator.html", params={"opsy": is_ok,
+                                                               "sols": solution})
 
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
@@ -101,6 +130,7 @@ app = webapp2.WSGIApplication([
     webapp2.Route('/capital', CGHandler),
     webapp2.Route('/sng',SNGHandler),
     webapp2.Route('/realblog', RBlHandler, name="realblog"),
+    webapp2.Route('/calculator', CalcHandler),
 ], debug=True)
 
 def main():
