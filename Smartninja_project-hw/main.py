@@ -36,12 +36,6 @@ class BlogHandler(BaseHandler):
         readable_date2 = current_datetime2.strftime("%Y-%m-%d %H:%M")
         return self.render_template("blog.html", params={"site_date2": readable_date2})
 
-class MyProjectHandler(BaseHandler):
-    def get(self):
-        current_datetime3 = datetime.datetime.now()
-        readable_date3 = current_datetime3.strftime("%Y-%m-%d %H:%M")
-        return self.render_template("myprojects.html",params={"site_date3": readable_date3})
-
 class ContactHandler(BaseHandler):
     def get(self):
         current_datetime4 = datetime.datetime.now()
@@ -71,13 +65,36 @@ class CGHandler(BaseHandler):
             # secretnumber = random.sample((0,5),1)
             #  "site_date": readable_date,
 
+class SNGHandler(BaseHandler):
+    def get(self):
+        return self.render_template("sng.html")
+
+    def post(self):
+        has_guessed = True
+        guess = self.request.get("guess")
+        # secretnumber = random.sample((0,5),1)
+        secretnumber = 4
+        number=int(guess or 0)
+        # wenn guess keinen Wert hat oder leer ist
+        is_guessed = secretnumber == number
+        return self.render_template("sng.html", params={"is_guessed": is_guessed,
+                                                        "has_guessed": has_guessed})
+
+class RBlHandler(BaseHandler):
+    def get(self):
+        return self.render_template("realblog.html")
+
+    def post(self):
+        pass
+
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
-    webapp2.Route('/myprojects', MyProjectHandler),
     webapp2.Route('/blog', BlogHandler),
     webapp2.Route('/contact', ContactHandler),
     webapp2.Route('/lotto', LottoHandler),
     webapp2.Route('/capital', CGHandler),
+    webapp2.Route('/sng',SNGHandler),
+    webapp2.Route('/realblog', RBlHandler),
 ], debug=True)
 
 def main():
