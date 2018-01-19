@@ -4,7 +4,7 @@
 {% block page_content %}
 <div class="container-fluid">
 <h1> Real Blog Page</h1>
-
+<h2>Post your comments</h2>
 <form method="post">
     <div class="input-group">
         <span class="input-group-addon">name</span>
@@ -17,12 +17,14 @@
 
     <button type="submit">Submit</button>
 </form>
+</div>
 
-
+<div class="container-fluid">
+<h2>History</h2>
 {% for message in messages %}
     <div class="panel panel-info">
       <div class="panel-heading">
-        <h3 class="panel-title">    {{ message.name }}</h3>
+        <h3 class="panel-title">{{ message.name }}, {{message.created}}</h3>
       </div>
       <div class="panel-body">
         {{ message.message_text }}

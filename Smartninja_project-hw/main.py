@@ -4,6 +4,7 @@ import jinja2
 import webapp2
 import random
 import datetime
+import model
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
@@ -82,10 +83,15 @@ class SNGHandler(BaseHandler):
 
 class RBlHandler(BaseHandler):
     def get(self):
-        return self.render_template("realblog.html")
-
+        messages = model.Message.query().fetch()
+        return self.render_template("realblog.html", params={"messages": messages})
     def post(self):
-        pass
+        uname = self.request.get("username")
+        message_t = self.request.get("message_text")
+        message = model.Message(message_text=message_t, name=uname)
+        message.put()
+        return self.redirect_to("realblog")
+
 
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
@@ -94,7 +100,7 @@ app = webapp2.WSGIApplication([
     webapp2.Route('/lotto', LottoHandler),
     webapp2.Route('/capital', CGHandler),
     webapp2.Route('/sng',SNGHandler),
-    webapp2.Route('/realblog', RBlHandler),
+    webapp2.Route('/realblog', RBlHandler, name="realblog"),
 ], debug=True)
 
 def main():
