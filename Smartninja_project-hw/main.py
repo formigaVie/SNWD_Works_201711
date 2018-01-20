@@ -122,6 +122,19 @@ class CalcHandler(BaseHandler):
         return self.render_template("calculator.html", params={"opsy": is_ok,
                                                                "sols": solution})
 
+class UnCoHandler(BaseHandler):
+    def get(self):
+        return self.render_template("unitconverter.html")
+
+    def post(self):
+        hasguessed = True
+        initstate = self.request.get("length")
+        DIGITS = 2
+        lconv = round(float(initstate or 0)/ 1.61, DIGITS)
+        return self.render_template("unitconverter.html", params={"has_guessed": hasguessed,
+                                                                  "convers": lconv,
+                                                                  "initst": initstate})
+
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
     webapp2.Route('/blog', BlogHandler),
@@ -131,6 +144,7 @@ app = webapp2.WSGIApplication([
     webapp2.Route('/sng',SNGHandler),
     webapp2.Route('/realblog', RBlHandler, name="realblog"),
     webapp2.Route('/calculator', CalcHandler),
+    webapp2.Route('/unitconverter', UnCoHandler),
 ], debug=True)
 
 def main():
