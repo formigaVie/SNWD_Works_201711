@@ -3,7 +3,7 @@
 {% block title %} RealBlog {% endblock title %}
 {% block page_content %}
 <div class="container-fluid">
-<h1> Real Blog Page</h1>
+<h1>Real Blog Page</h1>
 <h2>Post your comments</h2>
 <form method="post">
     <div class="input-group">
@@ -13,6 +13,10 @@
     <div class="input-group">
       <span class="input-group-addon">message</span>
       <input type="text" placeholder="Message" name="message_text">
+    </div>
+    <div class="input-group">
+      <span class="input-group-addon">email</span>
+      <input type="email" placeholder="Email" name="useremail">
     </div>
 
     <button type="submit">Submit</button>
@@ -24,7 +28,7 @@
 {% for message in messages %}
     <div class="panel panel-info">
       <div class="panel-heading">
-        <h3 class="panel-title">{{ message.name }}, {{message.created}}</h3>
+        <h3 class="panel-title">{{ message.name }},{{message.email_text}},{{message.created}}</h3>
       </div>
       <div class="panel-body">
         {{ message.message_text }}

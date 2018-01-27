@@ -89,7 +89,10 @@ class RBlHandler(BaseHandler):
         uname = self.request.get("username")
         uname = str(uname or "Anonymous")
         message_t = self.request.get("message_text")
-        message = model.Message(message_text=message_t, name=uname)
+        message_t = message_t.replace("<", "")
+        message_t = message_t.replace(">", "")
+        email_t = self.request.get("useremail")
+        message = model.Message(message_text=message_t, name=uname, email_text=email_t)
         message.put()
         return self.redirect_to("realblog")
 
@@ -113,6 +116,10 @@ class CalcHandler(BaseHandler):
             elif ops == "-":
                 solution = a - b
             elif ops == "/":
+                #if b == 0:
+                #    # additional entry if divisor is 0
+                #    print "Division by Zero"
+                #else:
                 solution = a / b
             elif ops == "*":
                 solution = a * b
