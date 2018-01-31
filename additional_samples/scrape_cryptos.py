@@ -12,11 +12,11 @@ soup = BS.BeautifulSoup(response)
 #soupEl = soup.div.findAll("a")
 #print soupEl
 links = soup.findAll("a",attrs={"title": "Euro"})
-#print links
-for link in links:
-    subpage_link = url + link["href"]
-    subresponse = urllib2.urlopen(subpage_link).read()
-    subsoup = BS.BeautifulSoup(subresponse)
+print links
+#for link in links:
+#    subpage_link = url + link["href"]
+#    subresponse = urllib2.urlopen(subpage_link).read()
+#    subsoup = BS.BeautifulSoup(subresponse)
     #print subsoup.findAll("h1",attrs={"class": "font-resize"})
-    print subsoup.div.findAll("span", attrs={"class": "instrument-id"})
+#    print subsoup.h1.findAll("span", attrs={"class": "instrument-id"})
     #print soup.html.head.title.string
