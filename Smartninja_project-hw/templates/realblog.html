@@ -23,12 +23,16 @@
 </form>
 </div>
 
+<form>
+    <h2>Do you like to have a look at the "fake" deletes: <a href="/fakedelete">List of "deleted messages"</a></h2>
+</form>
+
 <div class="container-fluid">
 <h2>History</h2>
 {% for message in messages %}
     <div class="panel panel-info">
       <div class="panel-heading">
-        <h3 class="panel-title">{{ message.name }},{{message.email_text}},{{message.created}}</h3>
+        <h3 class="panel-title">{{ message.name }},{{message.email_text}},{{message.created}} <a href="/message/{{ message.key.id() }}/edit"> edit </a></br><a href="/message/{{ message.key.id() }}/delete"> delete </a></h3>
       </div>
       <div class="panel-body">
         {{ message.message_text }}

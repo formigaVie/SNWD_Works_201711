@@ -1,5 +1,6 @@
 import urllib2
 import BeautifulSoup as BS
+import re
 
 url = 'https://www.finanzen.net/devisen/kryptowaehrungen'
 #url = 'https://www.coingecko.com/de'
@@ -11,8 +12,10 @@ soup = BS.BeautifulSoup(response)
 #soupEl = soup.div.findAll("a", attrs={"title":"Euro"})
 #soupEl = soup.div.findAll("a")
 #print soupEl
-links = soup.findAll("a",attrs={"title": "Euro"})
-print links
+cryptolist = soup.findAll("div",attrs={"id":"cryptoList_EUR"})
+print cryptolist
+#links = soup.findAll("a",attrs={"title": "Euro"})
+#print links
 #for link in links:
 #    subpage_link = url + link["href"]
 #    subresponse = urllib2.urlopen(subpage_link).read()

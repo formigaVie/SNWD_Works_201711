@@ -11,17 +11,16 @@
     </div>
     <div class="input-group">
       <span class="input-group-addon">message</span>
-      <input type="text" placeholder="Message" name="message_text">
+      <input type="text" placeholder="Message" name="message_text" required>
     </div>
 
     <button type="submit">Submit</button>
 </form>
 
-
 {% for message in messages %}
 <div class="panel panel-info">
   <div class="panel-heading">
-    <h3 class="panel-title">    {{ message.name }}</h3>
+      <h3 class="panel-title">    {{ message.name }} <a href="/message/{{ message.key.id() }}/edit">edit</a></h3>
   </div>
   <div class="panel-body">
     {{ message.message_text }}

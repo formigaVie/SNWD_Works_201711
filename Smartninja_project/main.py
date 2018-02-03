@@ -106,6 +106,18 @@ class RBlHandler(BaseHandler):
         message.put()
         return self.redirect_to("realblog")
 
+class EditMessageHandler(BaseHandler):
+    def get(self, message_id):
+        message = model.Message.get_by_id(int(message_id))
+        return self.render_template("edit_message.html", params={"message": message})
+
+    def post(self, message_id):
+        message = model.Message.get_by_id(int(message_id))
+        message.message_text=self.request.get("message_text")
+        message.message_name=self.request.get("username")
+        message.put()
+        return self.redirect_to("realblog")
+
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
     webapp2.Route('/blog', BlogHandler),
@@ -114,7 +126,7 @@ app = webapp2.WSGIApplication([
     webapp2.Route('/shoppinglist', SLHandler),
     webapp2.Route('/capitals',CGHandler),
     webapp2.Route('/realblog',RBlHandler, name="realblog"),
-
+    webapp2.Route('/message/<message_id:\d+>/edit',EditMessageHandler),
 ], debug=True)
 
 def main():

@@ -5,6 +5,9 @@ import webapp2
 import random
 import datetime
 import model
+import string # import for PWDHandler
+from random import * # additional import for PWDHandler
+
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
@@ -83,18 +86,49 @@ class SNGHandler(BaseHandler):
 
 class RBlHandler(BaseHandler):
     def get(self):
-        messages = model.Message.query().fetch()
+        #messages = model.Message.query().fetch()
+        messages = model.Message.query(model.Message.deleted == False).fetch()
         return self.render_template("realblog.html", params={"messages": messages})
     def post(self):
         uname = self.request.get("username")
         uname = str(uname or "Anonymous")
         message_t = self.request.get("message_text")
-        message_t = message_t.replace("<", "")
-        message_t = message_t.replace(">", "")
+        message_t = message_t.replace("<", "&lt")
+        message_t = message_t.replace(">", "&gt")
         email_t = self.request.get("useremail")
         message = model.Message(message_text=message_t, name=uname, email_text=email_t)
         message.put()
         return self.redirect_to("realblog")
+
+class EditMessageHandler(BaseHandler):
+    def get(self, message_id):
+        message = model.Message.get_by_id(int(message_id))
+        return self.render_template("edit_message.html", params={"message": message})
+
+    def post(self, message_id):
+        message = model.Message.get_by_id(int(message_id))
+        message.message_text=self.request.get("message_text")
+        message.message_name=self.request.get("username")
+        message.put()
+        return self.redirect_to("realblog")
+
+class DeleteMessageHandler(BaseHandler):
+    def get(self, message_id):
+        message = model.Message.get_by_id(int(message_id))
+        return self.render_template("delete_message.html", params={"message": message})
+
+    def post(self, message_id):
+        message = model.Message.get_by_id(int(message_id))
+        #message.key.delete() #for real delete
+        message.deleted=True
+        message.put()
+        return self.redirect_to("realblog")
+
+class FDeleteMessageHandler(BaseHandler):
+    def get (self,message_id):
+        message = model.Message.query(model.Message.deleted==True).fetch()
+        return self.render_template("fakedelete.html", params={"message": message})
+
 
 class CalcHandler(BaseHandler):
     def get(self):
@@ -142,6 +176,30 @@ class UnCoHandler(BaseHandler):
                                                                   "convers": lconv,
                                                                   "initst": initstate})
 
+class PwdHandler(BaseHandler):
+    def get(self):
+        return self.render_template("password.html")
+
+    def post(self):
+        hasguessed = True
+        vers = "V0.2"
+        min_char = 8
+        max_char = 12
+        allchar = string.ascii_letters + string.punctuation + string.digits
+        allchar2 = string.ascii_letters + string.digits
+        password = "".join(choice(allchar) for x in range(randint(min_char, max_char)))
+        length1=len(password)
+        password2 = "".join(choice(allchar2) for x in range(randint(min_char, max_char)))
+        length2=len(password2)
+        readabledate = (datetime.datetime.now()).strftime("%Y-%m-%d %H:%M:%S")
+        return self.render_template("password.html", params={"pwd": password,
+                                                             "len1": length1,
+                                                             "pwd2": password2,
+                                                             "len2": length2,
+                                                             "ver": vers,
+                                                             "radate": readabledate,
+                                                             "has_guessed": hasguessed})
+
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
     webapp2.Route('/blog', BlogHandler),
@@ -152,6 +210,10 @@ app = webapp2.WSGIApplication([
     webapp2.Route('/realblog', RBlHandler, name="realblog"),
     webapp2.Route('/calculator', CalcHandler),
     webapp2.Route('/unitconverter', UnCoHandler),
+    webapp2.Route('/password', PwdHandler),
+    webapp2.Route('/message/<message_id:\d+>/edit', EditMessageHandler),
+    webapp2.Route('/message/<message_id:\d+>/delete', DeleteMessageHandler),
+    webapp2.Route('/fakedelete',FDeleteMessageHandler),
 ], debug=True)
 
 def main():

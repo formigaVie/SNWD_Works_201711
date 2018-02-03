@@ -1,0 +1,37 @@
+im Slack general - game of Thrones Beispiel
+
+HW: check noch einmal die geckocoin seite -> auf Homepage implementieren
+HW: bhomework -> game of thrones: 
+add HW: bhomework -> auf gae implementieren
+HW: check for auflistungsordnung im Python sortieren
+
+HW: gogs ist so etwas wie github im Slack general
+
+HW: Update the info from 19.1 & 19.2 
+
+HW: Datastore fertigmachen Login und JSON.API
+
+HW: 18.2 / 20.1 / 22.1 / 23.1 minimum Homeworks
+HW: add also 20.2 / 21.1 / 21.2 / 21.3
+23.1 add a own idea and page for additional page on my HW
+
+regex
+
+\(season_\d+\)
+
+\d -> digits
+\w -> words (Buchstaben
+\. -> 
+
+Class 20 Edit & Delete:
+
+edit (ID) button bei jedem Kommentar / Eintrag
+Hierfür muss die ID bekannt sein, damit der Eintrag editiert werden kann
+neue Seite mit Editieren -> zurück auf die Blogseite
+
+put()
+
+Wenn etwas über Python mit Server kommunizieren muss/soll dann muss eine neue Seite geladen werden nicht mit Modal.
+Nur möglich mit Modal und Javascript
+
+nächstes Mal wird delete and fakedelete
