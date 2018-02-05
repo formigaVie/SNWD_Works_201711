@@ -125,9 +125,21 @@ class DeleteMessageHandler(BaseHandler):
         return self.redirect_to("realblog")
 
 class FDeleteMessageHandler(BaseHandler):
-    def get (self,message_id):
-        message = model.Message.query(model.Message.deleted==True).fetch()
-        return self.render_template("fakedelete.html", params={"message": message})
+    def get(self):
+        messages = model.Message.query(model.Message.deleted == True).fetch()
+        return self.render_template("fake_del.html", params={"messages": messages})
+    def post(self,message_id):
+        message = model.Message.get_by_id(int(message_id))
+        full_del = self.request.get("complete_del_btn")
+        retour = self.request.get("undo_btn")
+        if full_del == True:
+            message.key.delete()
+        elif retour == True:
+            message.deleted = False
+            message.put()
+        else:
+            pass
+        return self.redirect_to("realblog")
 
 
 class CalcHandler(BaseHandler):

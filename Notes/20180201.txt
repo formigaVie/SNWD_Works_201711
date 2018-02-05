@@ -5,7 +5,7 @@ HW: bhomework -> game of thrones:
 add HW: bhomework -> auf gae implementieren
 HW: check for auflistungsordnung im Python sortieren
 
-HW: gogs ist so etwas wie github im Slack general
+gogs ist so etwas wie github ->  im Slack general
 
 HW: Update the info from 19.1 & 19.2 
 
@@ -35,3 +35,12 @@ Wenn etwas über Python mit Server kommunizieren muss/soll dann muss eine neue S
 Nur möglich mit Modal und Javascript
 
 nächstes Mal wird delete and fakedelete
+
+03.02.2018
+Problem mit meiner Umschreibung der Zeichen -> im Edit Bereich
+implement the PWD Page in formigaVIE-HW appspot Page
+
+05.02.2018
+Index Update
+Password Page implemented
+Update Edit / Delte / add a Fake delete Page
