@@ -8,6 +8,7 @@ import model
 import string # import for PWDHandler
 from random import * # additional import for PWDHandler
 
+from google.appengine.api import users
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
@@ -86,9 +87,19 @@ class SNGHandler(BaseHandler):
 
 class RBlHandler(BaseHandler):
     def get(self):
-        #messages = model.Message.query().fetch()
+        user = users.get_current_user()
         messages = model.Message.query(model.Message.deleted == False).fetch()
-        return self.render_template("realblog.html", params={"messages": messages})
+        messages = sorted(messages, key=lambda x: x.created)[::-1]
+        if user:
+            logged_in = True
+            logout_url = users.create_logout_url("/")
+            params = {"logged_in": logged_in, "logout_url": logout_url, "user": user, "messages": messages}
+        else:
+            logged_in = False
+            login_url = users.create_login_url("/")
+            params = {"logged_in": logged_in, "login_url": login_url, "user": user, "messages": messages}
+        self.render_template("realblog.html", params=params)
+
     def post(self):
         uname = self.request.get("username")
         uname = str(uname or "Anonymous")
@@ -96,6 +107,10 @@ class RBlHandler(BaseHandler):
         message_t = message_t.replace("<", "&lt")
         message_t = message_t.replace(">", "&gt")
         email_t = self.request.get("useremail")
+        if email_t:
+            pass
+        else:
+            email_t = users.get_current_user().email()
         message = model.Message(message_text=message_t, name=uname, email_text=email_t)
         message.put()
         return self.redirect_to("realblog")
@@ -127,6 +142,8 @@ class DeleteMessageHandler(BaseHandler):
 class FDeleteMessageHandler(BaseHandler):
     def get(self):
         messages = model.Message.query(model.Message.deleted == True).fetch()
+        #additional line for sorting the imported messages
+        messages = sorted(messages, key=lambda x: x.created)[::-1]
         return self.render_template("fake_del.html", params={"messages": messages})
     def post(self,message_id):
         message = model.Message.get_by_id(int(message_id))
@@ -212,6 +229,20 @@ class PwdHandler(BaseHandler):
                                                              "radate": readabledate,
                                                              "has_guessed": hasguessed})
 
+# for first test this Route was established
+#class LoginHandler(BaseHandler):
+#    def get(self):
+#        user = users.get_current_user()
+#        if user:
+#            logged_in = True
+#            logout_url = users.create_logout_url("/")
+#            params = {"logged_in": logged_in, "logout_url": logout_url, "user": user}
+#        else:
+#            logged_in = False
+#            login_url = users.create_login_url("/")
+#            params = {"logged_in": logged_in, "login_url": login_url, "user": user}
+#        self.render_template("login.html", params=params)
+
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
     webapp2.Route('/blog', BlogHandler),
@@ -226,6 +257,8 @@ app = webapp2.WSGIApplication([
     webapp2.Route('/message/<message_id:\d+>/edit', EditMessageHandler),
     webapp2.Route('/message/<message_id:\d+>/delete', DeleteMessageHandler),
     webapp2.Route('/fakedelete',FDeleteMessageHandler),
+    # for first test this Route was established
+    # webapp2.Route('/logintest', LoginHandler, name="logintest"),
 ], debug=True)
 
 def main():

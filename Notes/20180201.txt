@@ -36,11 +36,15 @@ Nur möglich mit Modal und Javascript
 
 nächstes Mal wird delete and fakedelete
 
-03.02.2018
+03.02.2018:
 Problem mit meiner Umschreibung der Zeichen -> im Edit Bereich
 implement the PWD Page in formigaVIE-HW appspot Page
 
-05.02.2018
-Index Update
-Password Page implemented
-Update Edit / Delte / add a Fake delete Page
+05.02.2018:
+Index Update == add on
+Password Page implemented == add on
+Update Edit / Delte == 20.1 / add a Fake delete Page
+
+06.02.2018:
+update sorting of lists (additonal information also in additional examples folder)
+
