@@ -54,4 +54,4 @@ Add HW 22.1
 
 07.02.2018:
 API-Key: 35fe998feccf4baf99b049191dccc3ac
-
+Get an additional Page for the Weather information from Vienna with an API in the HW
