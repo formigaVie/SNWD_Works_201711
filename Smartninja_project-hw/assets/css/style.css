@@ -12,7 +12,11 @@
 }
 
 .img-center{
-    height: 400px;
+    max-height: 400px;
     width: 40%;
     margin: 0 auto;
+}
+
+.a {
+    list-style-type: circle;
 }

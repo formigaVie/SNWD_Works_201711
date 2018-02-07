@@ -6,9 +6,10 @@ import random
 import datetime
 import model
 import string # import for PWDHandler
-from random import * # additional import for PWDHandler
-
-from google.appengine.api import users
+import json # import for WeatherHandler
+from random import * # import for PWDHandler
+from google.appengine.api import users # import for Google Login
+from google.appengine.api import urlfetch # import for WeatherHandler
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
@@ -229,6 +230,14 @@ class PwdHandler(BaseHandler):
                                                              "radate": readabledate,
                                                              "has_guessed": hasguessed})
 
+class WeatherHandler(BaseHandler):
+        def get(self):
+            url = "http://api.openweathermap.org/data/2.5/weather?q=Vienna,at&units=metric&appid=35fe998feccf4baf99b049191dccc3ac"
+            result = urlfetch.fetch(url)
+            weather_info = json.loads(result.content)
+            params = {"weather_info": weather_info}
+            self.render_template("weather.html", params)
+
 # for first test this Route was established
 #class LoginHandler(BaseHandler):
 #    def get(self):
@@ -257,6 +266,7 @@ app = webapp2.WSGIApplication([
     webapp2.Route('/message/<message_id:\d+>/edit', EditMessageHandler),
     webapp2.Route('/message/<message_id:\d+>/delete', DeleteMessageHandler),
     webapp2.Route('/fakedelete',FDeleteMessageHandler),
+    webapp2.Route('/weather',WeatherHandler),
     # for first test this Route was established
     # webapp2.Route('/logintest', LoginHandler, name="logintest"),
 ], debug=True)

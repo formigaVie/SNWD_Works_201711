@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %} Weather {% endblock title %}
+
+{% block page_content %}
+<div class="container-fluid">
+    <h1>Weatherinformation</h1>
+    <h2>Weather in location {{ weather_info.name }}</h2>
+    <ul class="a">
+        <li>Description: {{ weather_info.weather[0].description }}</li>
+        <li>Min. temperature: {{ weather_info.main.temp_min }} °C</li>
+        <li>Current temperature: {{ weather_info.main.temp }} °C</li>
+        <li>Max. temperature: {{ weather_info.main.temp_max }} °C</li>
+        <li>Pressure: {{ weather_info.main.pressure }} </li>
+        <li>Humidity: {{ weather_info.main.humidity }} %</li>
+        <li>Sunrise: {{ weather_info.sys.sunrise }} </li>
+        <li>Sunset: {{ weather_info.sys.sunset }}</li>
+    </ul>
+    <p>Source from <a href="https://openweathermap.org/">OPENWEATHERMAP</a></p>
+</div>
+{% endblock page_content %}
