@@ -5,6 +5,9 @@ import webapp2
 import random
 import datetime
 import model
+import json
+
+from google.appengine.api import urlfetch
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
@@ -29,7 +32,11 @@ class BaseHandler(webapp2.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        return self.render_template("hello.html")
+        #add JSON und API
+        data = open("people.json", "r").read()
+        json_data = json.loads(data)
+        params = {"people_list": json_data}
+        return self.render_template("hello.html", params)
 
 MY_BLOG=[]
 class BlogHandler(BaseHandler):
@@ -118,6 +125,14 @@ class EditMessageHandler(BaseHandler):
         message.put()
         return self.redirect_to("realblog")
 
+class WeatherHandler(BaseHandler):
+    def get(self):
+        url = "http://api.openweathermap.org/data/2.5/weather?q=Vienna,at&units=metric&appid=35fe998feccf4baf99b049191dccc3ac"
+        result = urlfetch.fetch(url)
+        weather_info = json.loads(result.content)
+        params = {"weather_info": weather_info}
+        self.render_template("weather.html", params)
+
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
     webapp2.Route('/blog', BlogHandler),
@@ -127,6 +142,7 @@ app = webapp2.WSGIApplication([
     webapp2.Route('/capitals',CGHandler),
     webapp2.Route('/realblog',RBlHandler, name="realblog"),
     webapp2.Route('/message/<message_id:\d+>/edit',EditMessageHandler),
+    webapp2.Route('/weather', WeatherHandler),
 ], debug=True)
 
 def main():

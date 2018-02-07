@@ -43,8 +43,15 @@ implement the PWD Page in formigaVIE-HW appspot Page
 05.02.2018:
 Index Update == add on
 Password Page implemented == add on
-Update Edit / Delte == 20.1 / add a Fake delete Page
+Update Edit / Delte == 20.1 (done) / add a Fake delete Page
 
 06.02.2018:
-update sorting of lists (additonal information also in additional examples folder)
+update sorting of lists (additonal information also in additional samples folder)
+Pycharm Funktionen: 
+-Compare with Clipboard
+-Local History
+Add HW 22.1 
+
+07.02.2018:
+API-Key: 35fe998feccf4baf99b049191dccc3ac
 

@@ -1,0 +1,12 @@
+{% extends "frame.html" %}
+
+{% block title %} Weather - Vienna {% endblock title %}
+
+{% block page_content %}
+<h1>Weatherinformation</h1>
+<h2>Weather in location {{ weather_info.name }}</h2>
+
+<p>Description: {{ weather_info.weather[0].description }}</p>
+<p>Current temperature: {{ weather_info.main.temp }} degrees Celsius</p>
+
+{% endblock page_content %}

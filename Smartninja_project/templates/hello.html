@@ -2,5 +2,10 @@
 
 {% block title %} SNWD201711-formigaVIE {% endblock title %}
 {% block page_content %}
-    <h1>Hello to the SNWD course</h1>
+<h1>Hello to the SNWD course</h1>
+
+{% for person in people_list %}
+    <p>{{ person.first_name }} {{ person.last_name }}, {{ person.SSN }}</p>
+{% endfor %}
+
 {% endblock page_content %}
