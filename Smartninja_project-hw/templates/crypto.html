@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %} Cryptocurrencies {% endblock title %}
+
+{% block page_content %}
+<div class="container-fluid cen_elem">
+    <h1>Information for some Cryptocurrencies</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <table class="table table-bordered">
+                <thead>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Symbol</th>
+                    <th>Price €ur</th>
+                    <th>last update</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ btc_inf.rank }}</td>
+                        <td>{{ btc_inf.name }}</td>
+                        <td>{{ btc_inf.symbol }}</td>
+                        <td>{{ btc_inf.price_eur }}</td>
+                        <td>{{ btc_inf.last_updated }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ eth_inf.rank }}</td>
+                        <td>{{ eth_inf.name }}</td>
+                        <td>{{ eth_inf.symbol }}</td>
+                        <td>{{ eth_inf.price_eur }}</td>
+                        <td>{{ eth_inf.last_updated }}</td>
+                    </tr>
+                    <tr>
+                        <td>{{ ltc_inf.rank }}</td>
+                        <td>{{ ltc_inf.name }}</td>
+                        <td>{{ ltc_inf.symbol }}</td>
+                        <td>{{ ltc_inf.price_eur }}</td>
+                        <td>{{ ltc_inf.last_updated }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <p>{{ btc_inf }}</p>
+    <p>{{ eth_inf }}</p>
+    <p>{{ ltc_inf }}</p>
+</div>
+{% endblock page_content %}

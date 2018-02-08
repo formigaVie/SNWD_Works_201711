@@ -7,7 +7,7 @@ import datetime
 import model
 import string # import for PWDHandler
 import json # import for WeatherHandler
-from random import * # import for PWDHandler
+#from random import * # import for PWDHandler
 from google.appengine.api import users # import for Google Login
 from google.appengine.api import urlfetch # import for WeatherHandler
 
@@ -217,9 +217,9 @@ class PwdHandler(BaseHandler):
         max_char = 12
         allchar = string.ascii_letters + string.punctuation + string.digits
         allchar2 = string.ascii_letters + string.digits
-        password = "".join(choice(allchar) for x in range(randint(min_char, max_char)))
+        password = "".join(random.choice(allchar) for x in range(random.randint(min_char, max_char)))
         length1=len(password)
-        password2 = "".join(choice(allchar2) for x in range(randint(min_char, max_char)))
+        password2 = "".join(random.choice(allchar2) for x in range(random.randint(min_char, max_char)))
         length2=len(password2)
         readabledate = (datetime.datetime.now()).strftime("%Y-%m-%d %H:%M:%S")
         return self.render_template("password.html", params={"pwd": password,
@@ -228,15 +228,41 @@ class PwdHandler(BaseHandler):
                                                              "len2": length2,
                                                              "ver": vers,
                                                              "radate": readabledate,
-                                                             "has_guessed": hasguessed})
+                                                   "has_guessed": hasguessed})
 
 class WeatherHandler(BaseHandler):
         def get(self):
             url = "http://api.openweathermap.org/data/2.5/weather?q=Vienna,at&units=metric&appid=35fe998feccf4baf99b049191dccc3ac"
+            url2 = "http://api.openweathermap.org/data/2.5/weather?q=Denpasar&units=metric&appid=35fe998feccf4baf99b049191dccc3ac"
             result = urlfetch.fetch(url)
+            result2 = urlfetch.fetch(url2)
             weather_info = json.loads(result.content)
-            params = {"weather_info": weather_info}
-            self.render_template("weather.html", params)
+            weather_info2 = json.loads(result2.content)
+            current_datetime = datetime.datetime.now()
+            readable_date = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+            params = {"weather_info": weather_info,
+                      "weather_info2": weather_info2,
+                      "current_date": readable_date}
+            return self.render_template("weather.html", params)
+
+class CryptoHandler(BaseHandler):
+        def get(self):
+            btc = "https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert=EUR"
+            eth = "https://api.coinmarketcap.com/v1/ticker/ethereum/?convert=EUR"
+            ltc = "https://api.coinmarketcap.com/v1/ticker/litecoin/?convert=EUR"
+            result_btc = urlfetch.fetch(btc)
+            result_ltc = urlfetch.fetch(ltc)
+            result_eth = urlfetch.fetch(eth)
+            eth_info = json.loads(result_eth.content)
+            ltc_info = json.loads(result_ltc.content)
+            btc_info = json.loads(result_btc.content)
+            current_datetime = datetime.datetime.now()
+            readable_date = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+            params = {"btc_inf": btc_info,
+                      "eth_inf": eth_info,
+                      "ltc_inf": ltc_info,
+                      "current_date": readable_date}
+            return self.render_template("crypto.html", params)
 
 # for first test this Route was established
 #class LoginHandler(BaseHandler):
@@ -267,6 +293,7 @@ app = webapp2.WSGIApplication([
     webapp2.Route('/message/<message_id:\d+>/delete', DeleteMessageHandler),
     webapp2.Route('/fakedelete',FDeleteMessageHandler),
     webapp2.Route('/weather',WeatherHandler),
+    webapp2.Route('/crypto',CryptoHandler),
     # for first test this Route was established
     # webapp2.Route('/logintest', LoginHandler, name="logintest"),
 ], debug=True)

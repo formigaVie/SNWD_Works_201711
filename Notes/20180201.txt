@@ -50,7 +50,11 @@ update sorting of lists (additonal information also in additional samples folder
 Pycharm Funktionen: 
 -Compare with Clipboard
 -Local History
-Add HW 22.1 
+Add HW 22.1 (done)
+07.02.2018:
+Exercise class 23 JSON & API
+08.02.2018:
+add weather page and crypto page
 
 07.02.2018:
 API-Key: 35fe998feccf4baf99b049191dccc3ac

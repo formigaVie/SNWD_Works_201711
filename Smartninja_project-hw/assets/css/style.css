@@ -20,3 +20,7 @@
 .a {
     list-style-type: circle;
 }
+
+.cen_elem{
+    margin: 0 auto;
+}
