@@ -59,6 +59,7 @@ class LottoHandler(BaseHandler):
         # append date and my_lotto to MY_HISTORY
         MY_HISTORY.append( (readable_date,my_lotto) )
         return self.render_template("lotto.html", params={"mylotto": my_lotto,
+                                                          "site_date": readable_date,
                                                           "site_history": MY_HISTORY})
 
 class CGHandler(BaseHandler):
@@ -237,7 +238,11 @@ class WeatherHandler(BaseHandler):
             result = urlfetch.fetch(url)
             result2 = urlfetch.fetch(url2)
             weather_info = json.loads(result.content)
+            weather_info["sys"]["sunrise"]=datetime.datetime.fromtimestamp(weather_info["sys"]["sunrise"])
+            weather_info["sys"]["sunset"]=datetime.datetime.fromtimestamp(weather_info["sys"]["sunset"])
             weather_info2 = json.loads(result2.content)
+            weather_info2["sys"]["sunrise"]=datetime.datetime.fromtimestamp(weather_info2["sys"]["sunrise"])
+            weather_info2["sys"]["sunset"]=datetime.datetime.fromtimestamp(weather_info2["sys"]["sunset"])
             current_datetime = datetime.datetime.now()
             readable_date = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
             params = {"weather_info": weather_info,
@@ -245,22 +250,22 @@ class WeatherHandler(BaseHandler):
                       "current_date": readable_date}
             return self.render_template("weather.html", params)
 
+def get_crypto_info(coin):
+    base_url = "https://api.coinmarketcap.com/v1/ticker/{}/?convert=EUR".format(coin)
+    result = urlfetch.fetch(base_url)
+    data = json.loads(result.content)[0]
+    data["last_updated"] = datetime.datetime.fromtimestamp(float(data["last_updated"]))
+    return data
+
+   # date.fromtimestamp(timestamp)
+
 class CryptoHandler(BaseHandler):
         def get(self):
-            btc = "https://api.coinmarketcap.com/v1/ticker/bitcoin/?convert=EUR"
-            eth = "https://api.coinmarketcap.com/v1/ticker/ethereum/?convert=EUR"
-            ltc = "https://api.coinmarketcap.com/v1/ticker/litecoin/?convert=EUR"
-            result_btc = urlfetch.fetch(btc)
-            result_ltc = urlfetch.fetch(ltc)
-            result_eth = urlfetch.fetch(eth)
-            eth_info = json.loads(result_eth.content)
-            ltc_info = json.loads(result_ltc.content)
-            btc_info = json.loads(result_btc.content)
+            coins = ["bitcoin", "ethereum", "litecoin"]
+            info_c = [get_crypto_info(coin) for coin in coins]
             current_datetime = datetime.datetime.now()
             readable_date = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
-            params = {"btc_inf": btc_info,
-                      "eth_inf": eth_info,
-                      "ltc_inf": ltc_info,
+            params = {"infoc": info_c,
                       "current_date": readable_date}
             return self.render_template("crypto.html", params)
 

@@ -1,0 +1,29 @@
+-) add in Base.html
+the JS script von gogs Autowebtime von Patrick.
+
+-) Update the Time with date.fromtimestamp(timestamp)
+to get a new time for the APIs (Weather and crypto) -> erledigt
+
+WEb development 2
+
+SQL und Datenbanken
+GAE
+Memcache
+Email & Background tasks & Cron Jobs
+PIP & testing (Pip ist eine Eule die bringt dir Sachen)
+JQuery und Javascript
+Lightbox & Conclusion
+
+Login button in Navbar einbetten -> siehe Daten von Patrick
+
+gogs 
+https://try.gogs.io/patrick__/CourseCodes/src/master/
+Flask ist ein Miniframe so ähnlich wie GAE.
+
+Bei Bewerbungen auf jeden Fall mitkommentieren wenn Code hergezeigt wird
+
+example.py
+Strg+alt+shift+L um Formatierung zu korrigieren
+erste Zeile unter Funktion - vorgesehen für Doc strings """ -> erstellen dann """ """ nach eingabe von Enter restructered text format
+Strg und hover -> dann wird die erste Zeile des Kommentars dargestellt
+
