@@ -54,9 +54,20 @@
                 </div>
                 <button type="submit" class="btn btn-default">Submit</button>
             </form>
-                    </ul>
-                </li>
-            </ul>
+            {% if logged_in %}
+                <p class="navbar-text navbar-right">
+                    <a href="{{logout_url}}">
+                        <span class="glyphicon glyphicon-log-out"></span> Logout
+                    </a>
+                </p>
+                <p class="navbar-text navbar-right"> <span class="glyphicon glyphicon-user"></span> {{user.nickname()}} </p>
+            {% else %}
+                <p class="navbar-text navbar-right">
+                    <a href="{{login_url}}">
+                        <span class="glyphicon glyphicon-log-in"></span> Login
+                    </a>
+                </p>
+            {% endif %}
             <p class="navbar-text navbar-right" id="time"></p>
         </div><!-- /.navbar-collapse --
     </div><!-- /.container-fluid -->

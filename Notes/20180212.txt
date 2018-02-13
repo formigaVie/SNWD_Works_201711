@@ -1,5 +1,5 @@
 -) add in Base.html
-the JS script von gogs Autowebtime von Patrick.
+the JS script von gogs Autowebtime von Patrick. -> erledigt
 
 -) Update the Time with date.fromtimestamp(timestamp)
 to get a new time for the APIs (Weather and crypto) -> erledigt
@@ -15,6 +15,7 @@ JQuery und Javascript
 Lightbox & Conclusion
 
 Login button in Navbar einbetten -> siehe Daten von Patrick
+-> 13.02.2018 eingebaut
 
 gogs 
 https://try.gogs.io/patrick__/CourseCodes/src/master/
@@ -27,3 +28,7 @@ Strg+alt+shift+L um Formatierung zu korrigieren
 erste Zeile unter Funktion - vorgesehen für Doc strings """ -> erstellen dann """ """ nach eingabe von Enter restructered text format
 Strg und hover -> dann wird die erste Zeile des Kommentars dargestellt
 
+"""use pylint"""
+mindestens 7 oder 8 von 10 in der Industrie
+
+add class 9 todo programm exercise

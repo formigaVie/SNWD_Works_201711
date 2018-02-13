@@ -14,6 +14,7 @@ from google.appengine.api import urlfetch # import for WeatherHandler
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
 
+
 class BaseHandler(webapp2.RequestHandler):
 
     def write(self, *a, **kw):
@@ -32,9 +33,11 @@ class BaseHandler(webapp2.RequestHandler):
         template = jinja_env.get_template(view_filename)
         return self.response.out.write(template.render(params))
 
+
 class MainHandler(BaseHandler):
     def get(self):
         return self.render_template("index.html")
+
 
 class BlogHandler(BaseHandler):
     def get(self):
@@ -42,13 +45,16 @@ class BlogHandler(BaseHandler):
         readable_date2 = current_datetime2.strftime("%Y-%m-%d %H:%M")
         return self.render_template("blog.html", params={"site_date2": readable_date2})
 
+
 class ContactHandler(BaseHandler):
     def get(self):
         current_datetime4 = datetime.datetime.now()
         readable_date4 = current_datetime4.strftime("%Y-%m-%d %H:%M")
         return self.render_template("contact.html",params={"site_date4": readable_date4})
 
+
 MY_HISTORY=[]
+
 
 class LottoHandler(BaseHandler):
     def get(self):
@@ -62,6 +68,7 @@ class LottoHandler(BaseHandler):
                                                           "site_date": readable_date,
                                                           "site_history": MY_HISTORY})
 
+
 class CGHandler(BaseHandler):
     def get(self):
             return self.render_template("capitalsgame.html")
@@ -69,8 +76,10 @@ class CGHandler(BaseHandler):
     def post(self):
             has_guessed = True
             guess = self.request.get("guess")
+
             # secretnumber = random.sample((0,5),1)
             #  "site_date": readable_date,
+
 
 class SNGHandler(BaseHandler):
     def get(self):
@@ -81,11 +90,12 @@ class SNGHandler(BaseHandler):
         guess = self.request.get("guess")
         # secretnumber = random.sample((0,5),1)
         secretnumber = 4
-        number=int(guess or 0)
+        number = int(guess or 0)
         # wenn guess keinen Wert hat oder leer ist
         is_guessed = secretnumber == number
         return self.render_template("sng.html", params={"is_guessed": is_guessed,
                                                         "has_guessed": has_guessed})
+
 
 class RBlHandler(BaseHandler):
     def get(self):
@@ -94,11 +104,11 @@ class RBlHandler(BaseHandler):
         messages = sorted(messages, key=lambda x: x.created)[::-1]
         if user:
             logged_in = True
-            logout_url = users.create_logout_url("/")
-            params = {"logged_in": logged_in, "logout_url": logout_url, "user": user, "messages": messages}
+            logout_url = users.create_logout_url("/realblog")
+            params = {"logged_in": logged_in, "logout_url":logout_url, "user": user, "messages": messages}
         else:
             logged_in = False
-            login_url = users.create_login_url("/")
+            login_url = users.create_login_url("/realblog")
             params = {"logged_in": logged_in, "login_url": login_url, "user": user, "messages": messages}
         self.render_template("realblog.html", params=params)
 
@@ -117,6 +127,7 @@ class RBlHandler(BaseHandler):
         message.put()
         return self.redirect_to("realblog")
 
+
 class EditMessageHandler(BaseHandler):
     def get(self, message_id):
         message = model.Message.get_by_id(int(message_id))
@@ -128,6 +139,7 @@ class EditMessageHandler(BaseHandler):
         message.message_name=self.request.get("username")
         message.put()
         return self.redirect_to("realblog")
+
 
 class DeleteMessageHandler(BaseHandler):
     def get(self, message_id):
@@ -141,19 +153,22 @@ class DeleteMessageHandler(BaseHandler):
         message.put()
         return self.redirect_to("realblog")
 
+
 class FDeleteMessageHandler(BaseHandler):
     def get(self):
         messages = model.Message.query(model.Message.deleted == True).fetch()
         #additional line for sorting the imported messages
         messages = sorted(messages, key=lambda x: x.created)[::-1]
         return self.render_template("fake_del.html", params={"messages": messages})
-    def post(self,message_id):
+
+    def post(self, message_id):
         message = model.Message.get_by_id(int(message_id))
         full_del = self.request.get("complete_del_btn")
-        retour = self.request.get("undo_btn")
-        if full_del == True:
+        back = self.request.get("undo_btn")
+        if full_del:
             message.key.delete()
-        elif retour == True:
+            message.put()
+        elif back:
             message.deleted = False
             message.put()
         else:
@@ -194,6 +209,7 @@ class CalcHandler(BaseHandler):
         return self.render_template("calculator.html", params={"opsy": is_ok,
                                                                "sols": solution})
 
+
 class UnCoHandler(BaseHandler):
     def get(self):
         return self.render_template("unitconverter.html")
@@ -206,6 +222,7 @@ class UnCoHandler(BaseHandler):
         return self.render_template("unitconverter.html", params={"has_guessed": hasguessed,
                                                                   "convers": lconv,
                                                                   "initst": initstate})
+
 
 class PwdHandler(BaseHandler):
     def get(self):
@@ -231,6 +248,7 @@ class PwdHandler(BaseHandler):
                                                              "radate": readabledate,
                                                    "has_guessed": hasguessed})
 
+
 class WeatherHandler(BaseHandler):
         def get(self):
             url = "http://api.openweathermap.org/data/2.5/weather?q=Vienna,at&units=metric&appid=35fe998feccf4baf99b049191dccc3ac"
@@ -250,6 +268,7 @@ class WeatherHandler(BaseHandler):
                       "current_date": readable_date}
             return self.render_template("weather.html", params)
 
+
 def get_crypto_info(coin):
     base_url = "https://api.coinmarketcap.com/v1/ticker/{}/?convert=EUR".format(coin)
     result = urlfetch.fetch(base_url)
@@ -257,7 +276,6 @@ def get_crypto_info(coin):
     data["last_updated"] = datetime.datetime.fromtimestamp(float(data["last_updated"]))
     return data
 
-   # date.fromtimestamp(timestamp)
 
 class CryptoHandler(BaseHandler):
         def get(self):
@@ -283,6 +301,7 @@ class CryptoHandler(BaseHandler):
 #            params = {"logged_in": logged_in, "login_url": login_url, "user": user}
 #        self.render_template("login.html", params=params)
 
+
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
     webapp2.Route('/blog', BlogHandler),
@@ -303,9 +322,11 @@ app = webapp2.WSGIApplication([
     # webapp2.Route('/logintest', LoginHandler, name="logintest"),
 ], debug=True)
 
+
 def main():
     from paste import httpserver
     httpserver.serve(app, host='0.0.0.0', port='8090')
+
 
 if __name__ == '__main__':
     main()

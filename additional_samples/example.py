@@ -1,14 +1,16 @@
-def add_numbers(x,y):
+"""use pylint"""
+
+def add_numbers(xvalue, yvalue):
     """ add numbers and return sum
 
-    :param x:
-    :type x: int or float
-    :param y:
-    :type y: int or float
+    :param xvalue:
+    :type xvalue: int or float
+    :param yvalue:
+    :type yvalue: int or float
     :return:
     :rtype: int or float
     """
-    return x+y
+    return xvalue+yvalue
 
 
 if __name__ == '__main__':

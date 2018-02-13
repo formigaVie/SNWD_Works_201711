@@ -7,10 +7,15 @@
 {% for message in messages %}
   <div class="panel panel-warning">
     <div class="panel-heading">
-      <h3 class="panel-title"> {{ message.name }},{{ message.email_text }},{{ message.created }},{{ message.deleted }}<button class="btn btn-primary" type="button" name="undo_btn">Undo</button><button class="btn btn-danger" type="button" name="complete_del_btn">DELETE</button></h3>
+      <h3 class="panel-title"> {{ message.name }},{{ message.email_text }},{{ message.created }},{{ message.deleted }}</h3>
     </div>
     <div class="panel-body">
     {{ message.message_text }}
+    </div>
+    <div class="panel-footer">
+      <form method="post">
+        <button class="btn btn-primary" type="submit" value="undo" name="undo_btn"> UNDO </button><button class="btn btn-danger" type="submit" value="del" name="complete_del_btn"> DELETE </button>
+      </form>
     </div>
   </div>
 
