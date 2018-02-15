@@ -24,3 +24,15 @@
 .cen_elem{
     margin: 0 auto;
 }
+
+#map{
+    height: 250px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#map2{
+    height: 250px;
+    width: 80%;
+    margin: 0 auto;
+}

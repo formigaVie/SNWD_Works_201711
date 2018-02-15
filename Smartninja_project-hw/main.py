@@ -55,6 +55,8 @@ class ContactHandler(BaseHandler):
 
 MY_HISTORY=[]
 
+readabledate = (datetime.datetime.now()).strftime("%Y-%m-%d %H:%M:%S")
+
 
 class LottoHandler(BaseHandler):
     def get(self):
@@ -157,9 +159,14 @@ class DeleteMessageHandler(BaseHandler):
 class FDeleteMessageHandler(BaseHandler):
     def get(self):
         messages = model.Message.query(model.Message.deleted == True).fetch()
-        #additional line for sorting the imported messages
+        # additional line for sorting the imported messages
         messages = sorted(messages, key=lambda x: x.created)[::-1]
         return self.render_template("fake_del.html", params={"messages": messages})
+    #def get(self,message_id):
+    #    messages = model.Message.query(model.Message.deleted == True).fetch()
+    #    # additional line for sorting the imported messages
+    #    messages = sorted(messages, key=lambda x: x.created)[::-1]
+    #    return self.render_template("fake_del.html", params={"messages": messages})
 
     def post(self, message_id):
         message = model.Message.get_by_id(int(message_id))
@@ -287,6 +294,25 @@ class CryptoHandler(BaseHandler):
                       "current_date": readable_date}
             return self.render_template("crypto.html", params)
 
+
+TODO = []
+
+
+class TodoHandler(BaseHandler):
+        def get(self):
+            return self.render_template("todo.html")
+
+        def post(self):
+            global readabledate
+            global TODO
+            has_guessed = True
+            task = self.request.get("Todo")
+            TODO.append( (readabledate, task) )
+            return self.render_template("todo.html", params={"todotask": task,
+                                                             "guessed": has_guessed,
+                                                             "readabledate": readabledate,
+                                                             "sitehistory": TODO })
+
 # for first test this Route was established
 #class LoginHandler(BaseHandler):
 #    def get(self):
@@ -315,9 +341,11 @@ app = webapp2.WSGIApplication([
     webapp2.Route('/password', PwdHandler),
     webapp2.Route('/message/<message_id:\d+>/edit', EditMessageHandler),
     webapp2.Route('/message/<message_id:\d+>/delete', DeleteMessageHandler),
+#    webapp2.Route('/message/<message_id:\d+>/fakedelete',FDeleteMessageHandler),
     webapp2.Route('/fakedelete',FDeleteMessageHandler),
     webapp2.Route('/weather',WeatherHandler),
     webapp2.Route('/crypto',CryptoHandler),
+    webapp2.Route('/todo',TodoHandler),
     # for first test this Route was established
     # webapp2.Route('/logintest', LoginHandler, name="logintest"),
 ], debug=True)
