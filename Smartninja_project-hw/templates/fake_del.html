@@ -13,9 +13,7 @@
     {{ message.message_text }}
     </div>
     <div class="panel-footer">
-      <form method="post">
-        <button class="btn btn-primary" type="submit" value="undo" name="undo_btn"> UNDO </button><button class="btn btn-danger" type="submit" value="del" name="complete_del_btn"> DELETE </button>
-      </form>
+        <a href="/message/{{ message.key.id() }}/delete"> UNDO </a><a href="/message/{{ message.key.id() }}/delete"> DELETE </a>
     </div>
   </div>
 

@@ -151,8 +151,18 @@ class DeleteMessageHandler(BaseHandler):
     def post(self, message_id):
         message = model.Message.get_by_id(int(message_id))
         #message.key.delete() #for real delete
-        message.deleted=True
-        message.put()
+        fdelete = self.request.get("fdel")
+        delete = self.request.get("del")
+        undo = self.request.get("und")
+        if fdelete == "fd":
+            message.deleted=True
+            message.put()
+        elif undo == "un":
+            message.deleted=False
+            message.put()
+        elif delete == "de":
+            message.key.delete()
+
         return self.redirect_to("realblog")
 
 
@@ -168,19 +178,20 @@ class FDeleteMessageHandler(BaseHandler):
     #    messages = sorted(messages, key=lambda x: x.created)[::-1]
     #    return self.render_template("fake_del.html", params={"messages": messages})
 
-    def post(self, message_id):
-        message = model.Message.get_by_id(int(message_id))
-        full_del = self.request.get("complete_del_btn")
-        back = self.request.get("undo_btn")
-        if full_del:
-            message.key.delete()
-            message.put()
-        elif back:
-            message.deleted = False
-            message.put()
-        else:
-            pass
-        return self.redirect_to("realblog")
+    #def post(self):
+    #    pass
+        #message = model.Message.get_by_id(int(message_id))
+        #full_del = self.request.get("complete_del_btn")
+        #back = self.request.get("undo_btn")
+        #if full_del:
+        #    message.key.delete()
+        #    message.put()
+        #elif back:
+        #    message.deleted = False
+        #    message.put()
+        #else:
+        #    pass
+        #return self.redirect_to("realblog")
 
 
 class CalcHandler(BaseHandler):
